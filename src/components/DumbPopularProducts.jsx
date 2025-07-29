@@ -1,6 +1,6 @@
 import React from "react";
 
-function PopularProducts() {
+function DumbPopularProducts() {
   return (
     <>
 
@@ -512,4 +512,4 @@ function PopularProducts() {
 }
 
 
-export default PopularProducts;
+export default DumbPopularProducts;

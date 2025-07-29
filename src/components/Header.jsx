@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from 'react';
-function Header() {
-
-    const menuItems = [
+import { Link,useLocation  } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
+import SearchProduct from "./products/SearchProduct";
+ const menuItems = [
         {
             item: "Home",
-            link: "home",
+            link: "",
             child: []
         },
         {
@@ -59,11 +60,10 @@ function Header() {
                 },
             ]
         },
-
-
     ]
-
+function Header() {
     const [items, setItems] = useState(menuItems)
+    const {cartItems} = useContext(CartContext)
     return (
         <>
             <header className="h-[142px] max-[992px]:h-[133px] max-[576px]:h-[173px] bg-[#fff] border-b-[1px] border-solid border-[#e9e9e9]">
@@ -72,30 +72,14 @@ function Header() {
                         <div className="w-full px-[12px]">
                             <div
                                 className="top-header py-[20px] flex flex-row gap-[10px] justify-between border-b-[1px] border-solid border-[#e9e9e9] relative z-[4] max-[576px]:py-[15px] max-[576px]:block">
-                                <a href="index.html"
+                                <Link to={'/'}
                                     className="cr-logo max-[576px]:mb-[15px] max-[576px]:flex max-[576px]:justify-center">
-                                    <img src="assets/images/logo.png" alt="logo"
+                                    <img src="/assets/images/logo.png" alt="logo"
                                         className="logo block h-[35px] w-[115px] max-[576px]:w-[100px]" />
-                                    <img src="assets/images/dark-logo.png" alt="logo"
+                                    <img src="/assets/images/dark-logo.png" alt="logo"
                                         className="dark-logo hidden h-[35px] w-[115px] max-[576px]:w-[100px]" />
-                                </a>
-                                <form className="font-Manrope cr-search relative max-[576px]:max-w-[350px] max-[576px]:m-auto">
-                                    <input
-                                        className="search-input w-[600px] h-[45px] pl-[15px] pr-[175px] border-[1px] border-solid border-[#64b496] rounded-[5px] outline-[0] max-[1400px]:w-[400px] max-[992px]:max-w-[350px] max-[576px]:w-full max-[420px]:pr-[45px] "
-                                        type="text" placeholder="Search For items..." />
-                                    <select
-                                        className="form-select mr-[10px] w-[120px] h-[calc(100%-2px)] border-[0] tracking-[0] absolute top-[1px] pt-[0.375rem] pb-[0.375rem] pl-[0.5rem] outline-[0] right-[45px] text-[13px] border-l-[1px] border-solid border-[#64b496] rounded-[0] max-[420px]:hidden"
-                                        aria-label="Default select example">
-                                        <option selected>All Categories</option>
-                                        <option value="1">Mens</option>
-                                        <option value="2">Womens</option>
-                                        <option value="3">Electronics</option>
-                                    </select>
-                                    <a href="javascript:void(0)"
-                                        className="search-btn w-[45px] bg-[#64b496] absolute right-[0] top-[0] bottom-[0] rounded-r-[5px] flex items-center justify-center">
-                                        <i className="ri-search-line text-[14px] text-[#fff]"></i>
-                                    </a>
-                                </form>
+                                </Link>
+                                <SearchProduct />
                                 <div className="cr-right-bar flex max-[992px]:hidden">
                                     <ul className="navbar-nav m-auto relative z-[3]">
                                         <li className="nav-item dropdown relative">
@@ -125,12 +109,14 @@ function Header() {
                                         <span
                                             className="transition-all duration-[0.3s] ease-in-out font-Poppins text-[15px] leading-[15px] font-medium text-[#000]">Wishlist</span>
                                     </a>
-                                    <a href="javascript:void(0)"
+                                    <Link to={'my-cart'}
                                         className="cr-right-bar-item Shopping-toggle transition-all duration-[0.3s] ease-in-out flex items-center">
-                                        <i className="ri-shopping-cart-line pr-[5px] text-[21px] leading-[17px]"></i>
+                                        <i className="ri-shopping-cart-line pr-[5px] text-[21px] leading-[17px] relative">
+                                            <span className="absolute text-[red] text-[27px] font-extrabold -top-[19px] left-[8px] z-10">{cartItems.length}</span>
+                                        </i>
                                         <span
                                             className="transition-all duration-[0.3s] ease-in-out font-Poppins text-[15px] leading-[15px] font-medium text-[#000]">Cart</span>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -196,10 +182,13 @@ function Header() {
 
                                                 return <li
                                                     className="nav-item dropdown relative mr-[25px] max-[1400px]:mr-[20px] max-[1200px]:mr-[30px]">
-                                                    <a className="nav-link dropdown-toggle font-Poppins text-[14px] font-medium block text-[#000] z-[1] flex items-center relative py-[11px] px-[8px] max-[1200px]:py-[8px] max-[1200px]:px-[0]"
+                                                     <Link to={element.link} className="nav-link dropdown-toggle font-Poppins text-[14px] font-medium block text-[#000] z-[1] flex items-center relative py-[11px] px-[8px] max-[1200px]:py-[8px] max-[1200px]:px-[0]">
+                                                        {element.item}
+                                                     </Link>
+                                                    {/* <a className="nav-link dropdown-toggle font-Poppins text-[14px] font-medium block text-[#000] z-[1] flex items-center relative py-[11px] px-[8px] max-[1200px]:py-[8px] max-[1200px]:px-[0]"
                                                         href="javascript:void(0)">
                                                         {element.item}
-                                                    </a>
+                                                    </a> */}
                                                     {
                                                         element?.child.length > 0 ?
                                                             <ul

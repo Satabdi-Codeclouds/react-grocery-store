@@ -1,29 +1,30 @@
 // HeroSlider.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import banner1 from './../assets/images/banner.jpg';
-import banner2 from './../assets/images/banner-2.jpg';
+// import banner1 from '/assets/images/banner.jpg';
+// import banner2 from '/assets/images/banner-2.jpg';
 
 const slides = [
   {
     id: 1,
-    bg: banner2,
+    bg: '/assets/images/banner.jpg',
     title: 'Explore fresh & juicy fruits.',
     subtitle: '100% Organic Fruits',
   },
   {
     id: 2,
-    bg: banner1,
+    bg: '/assets/images/banner-2.jpg',
     title: 'The best way to stuff your wallet.',
     subtitle: '100% Organic Vegetables',
   },
 ];
 
 const HeroSlider = () => {
+  const [sliders,setSliders] = useState(slides)
   return (
     <section className="section-hero next pb-[100px] max-[1200px]:pb-[70px]">
       <Swiper
@@ -33,11 +34,11 @@ const HeroSlider = () => {
         loop
         className="cr-slider"
       >
-        {slides.map((slide) => (
+        {sliders.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div
               className="w-full bg-no-repeat bg-cover bg-center h-[80vh] max-[1200px]:h-[600px] max-[768px]:h-[500px] max-[480px]:h-[400px] max-[360px]:h-[350px] relative z-[1]"
-              style={{ backgroundImage: `url(${slide.bg})` }}
+              style={{ backgroundImage: `url('${slide.bg}')` }}
             >
               <div className="flex hero-container flex-wrap justify-between relative items-center mx-auto min-[1600px]:max-w-[1500px] min-[1400px]:max-w-[1320px] min-[1200px]:max-w-[1140px] min-[992px]:max-w-[960px] min-[768px]:max-w-[720px] min-[576px]:max-w-[540px]">
                 <div className="w-full px-[12px]">

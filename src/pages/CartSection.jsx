@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
-const CartSection = () => {
+export default function CartSection()  {
+  const {cartItems,rempoveFromCart,clearCart,increaseQuantity,decreaseQuantity} = useContext(CartContext);
   return (
     <section className="section-cart pt-[100px] max-[1200px]:pt-[70px]">
       <div className="flex flex-wrap justify-between relative items-center mx-auto min-[1600px]:max-w-[1500px] min-[1400px]:max-w-[1320px] min-[1200px]:max-w-[1140px] min-[992px]:max-w-[960px] min-[768px]:max-w-[720px] min-[576px]:max-w-[540px]">
@@ -56,33 +58,7 @@ const CartSection = () => {
                         </tr>
                       </thead>
                       <tbody>
-                        {[
-                          {
-                            name: "Organic Lemon",
-                            image: "assets/images/1.jpg",
-                            price: 56,
-                          },
-                          {
-                            name: "Apple Juice",
-                            image: "assets/images/2.jpg",
-                            price: 75,
-                          },
-                          {
-                            name: "Watermelon 5kg Pack",
-                            image: "assets/images/3.jpg",
-                            price: 48,
-                          },
-                          {
-                            name: "Pomegranate 5 kg pack",
-                            image: "assets/images/4.jpg",
-                            price: 90,
-                          },
-                          {
-                            name: "Organic Peach Fruits",
-                            image: "assets/images/5.jpg",
-                            price: 50,
-                          },
-                        ].map((item, index) => (
+                        {cartItems.map((item, index) => (
                           <tr key={index} className="border-b-[1px] border-solid border-[#e9e9e9]">
                             <td className="cr-cart-name w-[40%] py-[25px] px-[14px] text-[#444] text-[16px] text-left bg-[#f7f7f8]">
                               <a
@@ -90,7 +66,7 @@ const CartSection = () => {
                                 className="text-[#444] font-medium text-[14px] flex leading-[1.5] tracking-[0.6px] items-center"
                               >
                                 <img
-                                  src={item.image}
+                                  src={"assets/images/1.jpg"}
                                   alt={item.name}
                                   className="cr-cart-img mr-[20px] w-[60px] border-[1px] border-solid border-[#e9e9e9] rounded-[5px]"
                                 />
@@ -102,28 +78,34 @@ const CartSection = () => {
                             </td>
                             <td className="cr-cart-qty py-[25px] px-[14px] text-[#444] text-[16px] text-left bg-[#f7f7f8]">
                               <div className="cart-qty-plus-minus w-[80px] h-[30px] mx-auto relative overflow-hidden flex bg-[#fff] border-[1px] border-solid border-[#e9e9e9] rounded-[5px] items-center justify-between">
-                                <button type="button" className="plus h-[25px] w-[25px] -mt-[2px] border-0 bg-transparent flex justify-center items-center">+</button>
+                                <button 
+                                  onClick={(e)=> increaseQuantity(item.id)}
+                                 type="button" className="plus h-[25px] w-[25px] -mt-[2px] border-0 bg-transparent flex justify-center items-center">+</button>
                                 <input
                                   type="text"
                                   placeholder="."
-                                  defaultValue={1}
+                                  // defaultValue={item.quantity}
+                                  value={item.quantity}
                                   minLength={1}
                                   maxLength={20}
                                   className="quantity w-[30px] m-0 p-0 text-[#444] float-left text-[14px] font-semibold leading-[38px] h-auto text-center outline-0"
                                 />
-                                <button type="button" className="minus h-[25px] w-[25px] -mt-[2px] border-0 bg-transparent flex justify-center items-center">-</button>
+                                <button 
+                                onClick={(e)=> decreaseQuantity(item.id)}
+                                 type="button" className="minus h-[25px] w-[25px] -mt-[2px] border-0 bg-transparent flex justify-center items-center">-</button>
                               </div>
                             </td>
                             <td className="cr-cart-subtotal py-[25px] px-[14px] text-[#555] font-medium text-[15px] text-left bg-[#f7f7f8]">
-                              ${item.price.toFixed(2)}
+                              ${(parseFloat(item.price)*parseInt(item.quantity)).toFixed(2)}
                             </td>
                             <td className="cr-cart-remove py-[25px] px-[14px] w-[90px] text-[#555] font-medium text-[15px] text-right bg-[#f7f7f8]">
-                              <a
-                                href="#"
+                              <button
+                              type="button"
+                                onClick={(e)=>{e.stopPropagation();return rempoveFromCart(item.id)}}
                                 className="transition-all duration-[0.3s] ease-in-out mx-auto text-[#555] hover:text-[#fb5555]"
                               >
                                 <i className="ri-delete-bin-line text-[22px]" />
-                              </a>
+                              </button>
                             </td>
                           </tr>
                         ))}
@@ -160,4 +142,3 @@ const CartSection = () => {
   );
 };
 
-export default CartSection;

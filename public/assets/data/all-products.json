@@ -1,0 +1,259 @@
+{
+  "categories": [
+    {
+      "id": "cake-milk",
+      "name": "Cake & Milk",
+      "products": [
+        {
+          "id": "cm1",
+          "name": "Chocolate Cake",
+          "price": 350,
+          "unit": "500g",
+          "inStock": true,
+          "rating": 4.6,
+          "imageUrl": "https://source.unsplash.com/featured/?chocolate-cake"
+        },
+        {
+          "id": "cm2",
+          "name": "Vanilla Sponge Cake",
+          "price": 300,
+          "unit": "500g",
+          "inStock": true,
+          "rating": 4.2,
+          "imageUrl": "https://source.unsplash.com/featured/?vanilla-cake"
+        },
+        {
+          "id": "cm3",
+          "name": "Cheesecake",
+          "price": 450,
+          "unit": "1 piece",
+          "inStock": false,
+          "rating": 4.8,
+          "imageUrl": "https://source.unsplash.com/featured/?cheesecake"
+        },
+        {
+          "id": "cm4",
+          "name": "Milk (Full Cream)",
+          "price": 60,
+          "unit": "1L",
+          "inStock": true,
+          "rating": 4.1,
+          "imageUrl": "https://source.unsplash.com/featured/?milk"
+        },
+        {
+          "id": "cm5",
+          "name": "Milk (Toned)",
+          "price": 50,
+          "unit": "1L",
+          "inStock": true,
+          "rating": 3.9,
+          "imageUrl": "https://source.unsplash.com/featured/?toned-milk"
+        }
+      ]
+    },
+    {
+      "id": "fresh-meat",
+      "name": "Fresh Meat",
+      "products": [
+        {
+          "id": "fm1",
+          "name": "Chicken Curry Cut",
+          "price": 220,
+          "unit": "500g",
+          "inStock": true,
+          "rating": 4.5,
+          "imageUrl": "https://source.unsplash.com/featured/?chicken"
+        },
+        {
+          "id": "fm2",
+          "name": "Goat Mutton",
+          "price": 580,
+          "unit": "500g",
+          "inStock": false,
+          "rating": 4.7,
+          "imageUrl": "https://source.unsplash.com/featured/?mutton"
+        },
+        {
+          "id": "fm3",
+          "name": "Beef Steak",
+          "price": 490,
+          "unit": "500g",
+          "inStock": true,
+          "rating": 4.3,
+          "imageUrl": "https://source.unsplash.com/featured/?beef"
+        },
+        {
+          "id": "fm4",
+          "name": "Prawns (Large)",
+          "price": 520,
+          "unit": "500g",
+          "inStock": true,
+          "rating": 4.6,
+          "imageUrl": "https://source.unsplash.com/featured/?prawns"
+        },
+        {
+          "id": "fm5",
+          "name": "Fish (Rohu Slices)",
+          "price": 280,
+          "unit": "500g",
+          "inStock": true,
+          "rating": 4.2,
+          "imageUrl": "https://source.unsplash.com/featured/?fish"
+        }
+      ]
+    },
+    {
+      "id": "vegetables",
+      "name": "Vegetables",
+      "products": [
+        {
+          "id": "veg1",
+          "name": "Tomato",
+          "price": 35,
+          "unit": "1kg",
+          "inStock": true,
+          "rating": 4.1,
+          "imageUrl": "https://source.unsplash.com/featured/?tomato"
+        },
+        {
+          "id": "veg2",
+          "name": "Onion",
+          "price": 30,
+          "unit": "1kg",
+          "inStock": true,
+          "rating": 4.0,
+          "imageUrl": "https://source.unsplash.com/featured/?onion"
+        },
+        {
+          "id": "veg3",
+          "name": "Cabbage",
+          "price": 25,
+          "unit": "1 piece",
+          "inStock": true,
+          "rating": 3.9,
+          "imageUrl": "https://source.unsplash.com/featured/?cabbage"
+        },
+        {
+          "id": "veg4",
+          "name": "Lady Finger",
+          "price": 40,
+          "unit": "500g",
+          "inStock": false,
+          "rating": 4.2,
+          "imageUrl": "https://source.unsplash.com/featured/?okra"
+        },
+        {
+          "id": "veg5",
+          "name": "Green Peas",
+          "price": 50,
+          "unit": "500g",
+          "inStock": true,
+          "rating": 4.4,
+          "imageUrl": "https://source.unsplash.com/featured/?peas"
+        }
+      ]
+    },
+    {
+      "id": "apple-mango",
+      "name": "Apple & Mango",
+      "products": [
+        {
+          "id": "am1",
+          "name": "Apple (Fuji)",
+          "price": 160,
+          "unit": "1kg",
+          "inStock": true,
+          "rating": 4.5,
+          "imageUrl": "https://source.unsplash.com/featured/?fuji-apple"
+        },
+        {
+          "id": "am2",
+          "name": "Apple (Green)",
+          "price": 180,
+          "unit": "1kg",
+          "inStock": false,
+          "rating": 4.1,
+          "imageUrl": "https://source.unsplash.com/featured/?green-apple"
+        },
+        {
+          "id": "am3",
+          "name": "Mango (Alphonso)",
+          "price": 250,
+          "unit": "1kg",
+          "inStock": true,
+          "rating": 4.9,
+          "imageUrl": "https://source.unsplash.com/featured/?alphonso-mango"
+        },
+        {
+          "id": "am4",
+          "name": "Mango (Kesar)",
+          "price": 220,
+          "unit": "1kg",
+          "inStock": true,
+          "rating": 4.6,
+          "imageUrl": "https://source.unsplash.com/featured/?kesar-mango"
+        },
+        {
+          "id": "am5",
+          "name": "Apple (Royal Gala)",
+          "price": 170,
+          "unit": "1kg",
+          "inStock": true,
+          "rating": 4.4,
+          "imageUrl": "https://source.unsplash.com/featured/?royal-gala-apple"
+        }
+      ]
+    },
+    {
+      "id": "strawberry",
+      "name": "Strawberry",
+      "products": [
+        {
+          "id": "sb1",
+          "name": "Fresh Strawberry",
+          "price": 120,
+          "unit": "250g",
+          "inStock": true,
+          "rating": 4.8,
+          "imageUrl": "https://source.unsplash.com/featured/?strawberry"
+        },
+        {
+          "id": "sb2",
+          "name": "Strawberry Jam",
+          "price": 85,
+          "unit": "200g",
+          "inStock": true,
+          "rating": 4.2,
+          "imageUrl": "https://source.unsplash.com/featured/?strawberry-jam"
+        },
+        {
+          "id": "sb3",
+          "name": "Strawberry Yogurt",
+          "price": 50,
+          "unit": "100g",
+          "inStock": true,
+          "rating": 4.3,
+          "imageUrl": "https://source.unsplash.com/featured/?strawberry-yogurt"
+        },
+        {
+          "id": "sb4",
+          "name": "Strawberry Juice",
+          "price": 70,
+          "unit": "200ml",
+          "inStock": false,
+          "rating": 4.0,
+          "imageUrl": "https://source.unsplash.com/featured/?strawberry-juice"
+        },
+        {
+          "id": "sb5",
+          "name": "Frozen Strawberry",
+          "price": 140,
+          "unit": "500g",
+          "inStock": true,
+          "rating": 4.6,
+          "imageUrl": "https://source.unsplash.com/featured/?frozen-strawberry"
+        }
+      ]
+    }
+  ]
+}

@@ -2,7 +2,7 @@ import React from "react";
 import PopularProducts from './../components/products/PopularProducts';
 import HeroSlider from './../components/HeroSlider'
 import CategorySection from './../components/CategorySection'
-import ProductBanner from './../components/ProductBanner'
+import ProductBanner from './../components/products/ProductBanner'
 import ServiceSlider from './../components/ServiceSlider'
 import DealSection from './../components/DealSection'
 import BlogSection from './../components/BlogSection'

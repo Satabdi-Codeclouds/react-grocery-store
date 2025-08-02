@@ -1,0 +1,11 @@
+{
+    "validation": {
+         "firstname": "First Name is required!",
+        "lastname": "Last Name is required!",
+        "address": "Address is required!",
+        "country": "Country is required!",
+        "state": "State is required!",
+        "city": "City is required!",
+        "postalCode": "Postal Code is required!"
+    }
+}

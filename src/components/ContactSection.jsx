@@ -1,11 +1,7 @@
 import React from 'react';
-import 'aos/dist/aos.css';
-import AOS from 'aos';
 
 const ContactSection = () => {
-  React.useEffect(() => {
-    AOS.init({ once: true });
-  }, []);
+
 
   return (
     <section className="section-Contact py-[100px] max-[1200px]:py-[70px]">

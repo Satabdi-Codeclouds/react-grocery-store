@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "email": "satabdi.roy@codeclouds.in",
+    "password": "cGFzc3dvcmQxMjM=",
+    "name": "Satabdi Roy",
+    "userName": "satabdi.roy@codeclouds.in"
+  },
+  {
+    "id": 2,
+    "email": "test@gmail.com",
+    "password": "bXlwYXNzd29yZA==",
+    "name": "Test",
+    "userName": "test1234"
+  },
+  {
+    "id": 3,
+    "email": "admin@gmail.com",
+    "password": "YWRtaW4xMjM=",
+    "name": "Admin User",
+    "userName":"admin1234"
+  }
+]

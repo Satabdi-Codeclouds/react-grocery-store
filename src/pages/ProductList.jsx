@@ -2,36 +2,77 @@ import React, { useEffect, useState } from "react";
 import ProductItem from '../components/products/ProductItem';
 import useFetch from "../hooks/useFetch";
 import ProductFilterSidebar from "../components/products/ProductFilterSidebar";
+import ReactPaginate from 'react-paginate';
+import '../components/products/pagination.css';
 
-
-
+const itemsPerPage = 10;
 const ProductList = () => {
     const [msg, setMessage] = useState("");
     const { data: prodList, loading, error } = useFetch(`/assets/data/all-products.json`);
     const [filteredData, setFilteredData] = useState([]);
+    const [currentPage, setCurrentPage] = useState(0);
+  //  const [pageCount,setPageCount] =  useState(0);
+    const [modifiedResult,setModifiedResult] = useState([])
+    const offset = currentPage * itemsPerPage;
 
     useEffect(() => {
-        setFilteredData(prodList?.categories)
+        const productsWithCategory = [];
+        if(prodList?.categories?.length > 0) {
+            prodList.categories.forEach((element) => {
+                element.products.forEach((product)=>{
+                    productsWithCategory.push({...product,catId:element.id,catName:element.name})
+                })
+            })
+        }
+        setModifiedResult(productsWithCategory)
+      //  setPageCount(Math.ceil(productsWithCategory.length / itemsPerPage))
+       // const currentItems = productsWithCategory.slice(offset, offset + itemsPerPage)
+        setFilteredData(productsWithCategory)
     }, [prodList])
 
-    const filterProducts = (values) => {
-            const min = values[0]
-            const max = values[1]
-            let filteredData = [];
-            if (prodList?.categories?.length > 0) {
-                filteredData = prodList?.categories.map((catObj) => {
-                    const filteredProducts = catObj.products.filter((prodObj) => {
-                        return prodObj.price >= min && prodObj.price <= max
-                    })
-                    return {
-                        ...catObj,
-                        products: filteredProducts
-                    }
-                })
-            }
+    // useEffect(()=>{
+    //     if(filteredData.length > 0) {
+    //         setPageCount(Math.ceil(filteredData.length / itemsPerPage))
+    //     }
+    // },[filteredData])
+    
 
-         setFilteredData(filteredData)
+    const filterProducts = (values, selectedCategories) => {
+        console.log(selectedCategories)
+        const min = values[0]
+        const max = values[1]
+        let filteredData = [];
+        if (modifiedResult.length > 0) {
+             filteredData = modifiedResult.filter((productObj)=>{
+                return selectedCategories.length === 0 || selectedCategories.includes(productObj.catId)
+            }).filter((filteredCatProd) => {
+                  return filteredCatProd.price >= min && filteredCatProd.price <= max
+            })
+
+            // filteredData = modifiedResult.filter((obj) => {
+            //     return selectedCategories.length === 0 || selectedCategories.includes(obj.catId)
+            // }).map((catObj) => {
+            //     const filteredProducts = catObj.products.filter((prodObj) => {
+            //         return prodObj.price >= min && prodObj.price <= max
+            //     })
+            //     return {
+            //         ...catObj,
+            //         products: filteredProducts
+            //     }
+            // })
+        }
+       // const currentItems = filteredData.slice(offset, offset + itemsPerPage)
+
+        setFilteredData(filteredData)
     }
+
+    const handlePageClick = (event) => {
+        setCurrentPage(event.selected);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    
+    const currentItems = filteredData.slice(offset, offset + itemsPerPage);
+    const pageCount = Math.ceil(filteredData.length / itemsPerPage);
 
     return (
         <>
@@ -52,7 +93,7 @@ const ProductList = () => {
                     </div>
                     <div className="product-content flex flex-wrap w-full mb-[-24px]" id="MixItUpDA2FB7">
                         <div className="min-[1200px]:w-[25%] min-[992px]:w-[33.33%] w-full mb-[24px]">
-                            <ProductFilterSidebar filterHandler={filterProducts} productList={prodList}/>
+                            <ProductFilterSidebar filterHandler={filterProducts} productList={prodList} />
                             <div className="flex flex-wrap w-full mb-[-24px] sticky top-[0]">
                                 <div className="min-[992px]:w-full w-[50%] max-[480px]:w-full px-[12px] mb-[24px]">
 
@@ -75,10 +116,8 @@ const ProductList = () => {
                         <div className="min-[1200px]:w-[75%] min-[992px]:w-[66.66%] w-full mb-[24px]">
                             <div className="flex flex-wrap w-full mb-[-24px]">
                                 {
-                                    !loading ? filteredData?.length > 0 ? filteredData.map((category, index) => {
-                                        return category?.products.map((catProduct, catProductIndex) => {
-                                            return <ProductItem productItem={catProduct} categoryObj={category} />
-                                        })
+                                    !loading ? currentItems?.length > 0 ? currentItems.map((catProduct, catProductIndex) => {
+                                            return <ProductItem productItem={catProduct} categoryObj={{id:catProduct.catId,name:catProduct.name}} />
 
                                     }) : <div className="w-full p-[10px] text-center"><p>No Product found</p></div>
                                         : <div className="w-full p-[10px] text-center"><p>loading...</p></div>
@@ -87,6 +126,15 @@ const ProductList = () => {
 
                             </div>
                         </div>
+                        <ReactPaginate
+                            previousLabel={'Previous'}
+                            nextLabel={'Next'}
+                            pageCount={pageCount}
+                            onPageChange={handlePageClick}
+                            containerClassName={'pagination custom-pagination'}
+                            activeClassName={'active'}
+                            disabledClassName={'disabled'}
+                        />
                     </div>
                 </div>
             </section>

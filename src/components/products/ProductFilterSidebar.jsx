@@ -1,20 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import useFetch from "../../hooks/useFetch";
 
 const ProductFilterSidebar = ({ filterHandler, productList }) => {
   const [range, setRange] = useState([20, 1000]);
-
+  const [selectedCategories,setSelectedCategories] = useState([])
+  
+  useEffect(()=>{
+     filterHandler(range,selectedCategories)
+  },[range,selectedCategories])
 
   const onSliderChange = (values) => {
     setRange(values);
-    filterHandler(values)
   };
 
   const handleCategoryFilter = (event) => {
-    if(event.target.checked)
-      console.log(event.target.value)
+    let currentSelectedCategories = []
+    setSelectedCategories((prevCategories)=>{
+      currentSelectedCategories = event.target.checked ? [...prevCategories,event.target.value]  : prevCategories.filter((categoryId) => {
+        return categoryId !== event.target.value
+      });
+      return currentSelectedCategories
+    })
   }
 
   return (
@@ -27,7 +35,9 @@ const ProductFilterSidebar = ({ filterHandler, productList }) => {
         <div className="cr-checkbox pt-[28px] max-[992px]:pt-[30px]">
           {productList?.categories?.length > 0 ? productList?.categories.map((catObj,catIndex) => (
             <div key={catIndex+'-'+catObj.id} className="checkbox-group flex items-center relative mb-[15px]">
-              <input value={catObj.id} type="checkbox" id={catIndex+'-'+catObj.id} className="hidden cursor-pointer" onChange={handleCategoryFilter} />
+              <input checked={selectedCategories.includes(catObj.id)}  
+              value={catObj.id} type="checkbox" id={catIndex+'-'+catObj.id} 
+              className="hidden cursor-pointer" onChange={handleCategoryFilter} />
               <label htmlFor={catIndex+'-'+catObj.id} className="font-Poppins text-[14px] text-[#7a7a7a] cursor-pointer capitalize inline-block">
                 {catObj.name}
               </label>

@@ -1,69 +1,74 @@
 import React, { useContext } from "react";
 import { useState } from 'react';
-import { Link,useLocation  } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import SearchProduct from "./products/SearchProduct";
- const menuItems = [
-        {
-            item: "Home",
-            link: "",
-            child: []
-        },
-        {
-            item: "Category",
-            link: "category",
-            child: [
-                {
-                    item: "Shop Left sidebar",
-                    link: "shop-left-sidebar",
+import { LoginModalContext } from "../context/LoginModalContext";
+import { loginContext } from "../context/LoginContext";
+const menuItems = [
+    {
+        item: "Home",
+        link: "",
+        child: []
+    },
+    {
+        item: "Category",
+        link: "category",
+        child: [
+            {
+                item: "Shop Left sidebar",
+                link: "shop-left-sidebar",
 
-                }
-            ]
-        },
+            }
+        ]
+    },
 
-        {
-            item: "Products",
-            link: "products",
-            child: []
-        },
-        {
-            item: "Pages",
-            link: "pages",
-            child: [
-                {
-                    item: "About Us",
-                    link: "about",
-                },
-                {
-                    item: "Contact Us",
-                    link: "Contact",
-                },
-                {
-                    item: "Cart",
-                    link: "cart",
-                },
-                {
-                    item: "Checkout",
-                    link: "checkout",
-                },
-                {
-                    item: "Wishlist",
-                    link: "wishlist",
-                },
-                {
-                    item: "Faq",
-                    link: "faq",
-                },
-                {
-                    item: "Login",
-                    link: "login",
-                },
-            ]
-        },
-    ]
+    {
+        item: "Products",
+        link: "products",
+        child: []
+    },
+    {
+        item: "Pages",
+        link: "pages",
+        child: [
+            {
+                item: "About Us",
+                link: "about",
+            },
+            {
+                item: "Contact Us",
+                link: "Contact",
+            },
+            {
+                item: "Cart",
+                link: "cart",
+            },
+            {
+                item: "Checkout",
+                link: "checkout",
+            },
+            {
+                item: "Wishlist",
+                link: "wishlist",
+            },
+            {
+                item: "Faq",
+                link: "faq",
+            },
+            {
+                item: "Login",
+                link: "login",
+            },
+        ]
+    },
+]
 function Header() {
     const [items, setItems] = useState(menuItems)
-    const {cartItems} = useContext(CartContext)
+    const { cartItems } = useContext(CartContext)
+    const { openModal, closeModal } = useContext(LoginModalContext)
+    const { user,logout } = useContext(loginContext)
+
     return (
         <>
             <header className="h-[142px] max-[992px]:h-[133px] max-[576px]:h-[173px] bg-[#fff] border-b-[1px] border-solid border-[#e9e9e9]">
@@ -83,32 +88,37 @@ function Header() {
                                 <div className="cr-right-bar flex max-[992px]:hidden">
                                     <ul className="navbar-nav m-auto relative z-[3]">
                                         <li className="nav-item dropdown relative">
-                                            <a className="nav-link dropdown-toggle cr-right-bar-item transition-all duration-[0.3s] ease-in-out flex items-center relative text-[14px] font-medium text-[#000] z-[1] relative py-[11px] pr-[30px] pl-[8px] max-[1200px]:py-[8px]"
-                                                href="javascript:void(0)">
+                                            <button type="button" className="nav-link dropdown-toggle cr-right-bar-item transition-all duration-[0.3s] ease-in-out flex items-center relative text-[14px] font-medium text-[#000] z-[1] relative py-[11px] pr-[30px] pl-[8px] max-[1200px]:py-[8px]"
+                                            >
                                                 <i className="ri-user-3-line pr-[5px] text-[21px] leading-[17px]"></i>
                                                 <span
-                                                    className="transition-all duration-[0.3s] ease-in-out font-Poppins text-[15px] leading-[15px] text-[15px] font-medium text-[#000] tracking-[0.03rem] font-Manrope">Account</span>
-                                            </a>
+                                                    className="transition-all duration-[0.3s] ease-in-out font-Poppins text-[15px] leading-[15px] text-[15px] font-medium text-[#000] tracking-[0.03rem] font-Manrope">{user?.name ? user?.name : 'Account'}</span>
+                                            </button>
                                             <ul
                                                 className="dropdown-menu transition-all duration-[0.3s] ease-in-out py-[8px] min-w-[160px] mt-[35px] absolute text-left opacity-0 invisible left-auto bg-[#fff] rounded-[5px] block z-[9] border-[1px] border-solid border-[#e9e9e9]">
+                                                {cartItems.length > 0 ?
+                                                    <li className="w-full mr-[0]">
+                                                        <Link to={'/checkout'} className="text-left dropdown-item transition-all duration-[0.3s] ease-in-out py-[7px] px-[20px] bg-[#fff] relative capitalize block w-full text-[#777] text-[13px] font-normal"
+                                                        >Checkout</Link>
+                                                    </li> : ''}
 
                                                 <li className="w-full mr-[0]">
-                                                    <a className="dropdown-item transition-all duration-[0.3s] ease-in-out py-[7px] px-[20px] bg-[#fff] relative capitalize block w-full text-[#777] text-[13px] font-normal"
-                                                        href="checkout.html">Checkout</a>
+                                                    { !user?.id ?
+                                                        <button onClick={(e) => { return openModal() }} type="button" className="text-left dropdown-item transition-all duration-[0.3s] ease-in-out py-[7px] px-[20px] bg-[#fff] relative capitalize block w-full text-[#777] text-[13px] font-normal"
+                                                            href="login.html">Login</button>
+                                                        : <button onClick={(e) => { return logout() }} type="button" className="text-left dropdown-item transition-all duration-[0.3s] ease-in-out py-[7px] px-[20px] bg-[#fff] relative capitalize block w-full text-[#777] text-[13px] font-normal"
+                                                            href="login.html">Logout</button>}
                                                 </li>
-                                                <li className="w-full mr-[0]">
-                                                    <a className="dropdown-item transition-all duration-[0.3s] ease-in-out py-[7px] px-[20px] bg-[#fff] relative capitalize block w-full text-[#777] text-[13px] font-normal"
-                                                        href="login.html">Login</a>
-                                                </li>
+
                                             </ul>
                                         </li>
                                     </ul>
-                                    <a href="wishlist.html"
+                                    <Link to={'wishlist'}
                                         className="cr-right-bar-item pr-[30px] transition-all duration-[0.3s] ease-in-out flex items-center">
                                         <i className="ri-heart-3-line pr-[5px] text-[21px] leading-[17px]"></i>
                                         <span
                                             className="transition-all duration-[0.3s] ease-in-out font-Poppins text-[15px] leading-[15px] font-medium text-[#000]">Wishlist</span>
-                                    </a>
+                                    </Link>
                                     <Link to={'my-cart'}
                                         className="cr-right-bar-item Shopping-toggle transition-all duration-[0.3s] ease-in-out flex items-center">
                                         <i className="ri-shopping-cart-line pr-[5px] text-[21px] leading-[17px] relative">
@@ -141,7 +151,7 @@ function Header() {
                                     className="navbar-toggler py-[7px] px-[14px] hidden text-[16px] leading-[1] max-[992px]:flex max-[992px]:p-[0] max-[992px]:border-[0]">
                                     <i className="ri-menu-3-line max-[992px]:text-[20px]"></i>
                                 </a>
-                                <div className="cr-header-buttons hidden max-[992px]:flex max-[992px]:items-center">
+                                {/* <div className="cr-header-buttons hidden max-[992px]:flex max-[992px]:items-center">
                                     <ul
                                         className="navbar-nav relative z-[3] m-auto max-[1200px]:mr-[-5px] max-[992px]:m-[0] flex flex-col">
                                         <li className="nav-item dropdown relative">
@@ -171,7 +181,7 @@ function Header() {
                                         className="cr-right-bar-item Shopping-toggle transition-all duration-[0.3s] ease-in-out mr-[16px] max-[992px]:m-[0]">
                                         <i className="ri-shopping-cart-line text-[20px]"></i>
                                     </a>
-                                </div>
+                                </div> */}
                                 <div className="min-[992px]:flex min-[992px]:basis-auto grow-[1] items-center hidden"
                                     id="navbarSupportedContent">
                                     <ul
@@ -182,9 +192,9 @@ function Header() {
 
                                                 return <li
                                                     className="nav-item dropdown relative mr-[25px] max-[1400px]:mr-[20px] max-[1200px]:mr-[30px]">
-                                                     <Link to={element.link} className="nav-link dropdown-toggle font-Poppins text-[14px] font-medium block text-[#000] z-[1] flex items-center relative py-[11px] px-[8px] max-[1200px]:py-[8px] max-[1200px]:px-[0]">
+                                                    <Link to={element.link} className="nav-link dropdown-toggle font-Poppins text-[14px] font-medium block text-[#000] z-[1] flex items-center relative py-[11px] px-[8px] max-[1200px]:py-[8px] max-[1200px]:px-[0]">
                                                         {element.item}
-                                                     </Link>
+                                                    </Link>
                                                     {/* <a className="nav-link dropdown-toggle font-Poppins text-[14px] font-medium block text-[#000] z-[1] flex items-center relative py-[11px] px-[8px] max-[1200px]:py-[8px] max-[1200px]:px-[0]"
                                                         href="javascript:void(0)">
                                                         {element.item}
@@ -196,7 +206,7 @@ function Header() {
                                                                 {element.child.map((childElement, childIndex) => {
 
 
-                                                               return  <li className="w-full mr-[0]">
+                                                                    return <li className="w-full mr-[0]">
                                                                         <a className="dropdown-item transition-all duration-[0.3s] ease-in-out font-Poppins py-[7px] px-[20px] bg-[#fff] relative capitalize text-[13px] text-[#777] hover:text-[#64b496] whitespace-nowrap tracking-[0.03rem] block w-full"
                                                                             href="shop-left-sidebar.html">{childElement.item}</a>
                                                                     </li>

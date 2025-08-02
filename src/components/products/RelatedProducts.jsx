@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -31,9 +31,12 @@ export default function RelatedProducts({ categoryId }) {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 2000,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: true,
         slidesToShow: 4,
-        slidesToScroll: 3
+        slidesToScroll: 1
     };
     const [productList, setProductList] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -54,15 +57,15 @@ export default function RelatedProducts({ categoryId }) {
         }
     }
     return (
-        
+
         <div className="slider-container">
             <Slider {...settings}>
                 {productList.map((categoryObj) => {
                     return categoryObj.products.map((productObj) => {
-                        return <ProductItem fromRelatedProduct={true} productItem={productObj} categoryObj={categoryObj}/>
+                        return <ProductItem fromRelatedProduct={true} productItem={productObj} categoryObj={categoryObj} />
                     })
                 })}
-                
+
             </Slider>
         </div>
     );

@@ -2898,3 +2898,46 @@ ul#myCategoriesTab li.active a {
 .swiper-button-prev {
   display: none !important;
 }
+.custom-toast .Toastify__toast-theme--colored.Toastify__toast--default {
+  border-bottom: 5px solid #64b496;
+}
+.bg-theme{background-color: #64b496 !important;color: #ffffff !important;}
+/* .custom-pagination li{cursor: default !important;}
+.custom-pagination .active{
+      background-color: #64b496 !important;
+    border-color: #64b496;
+    color: #fff;
+} */
+ .custom-login-modal{width: 545px;}
+   .spinner-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 40px auto;
+    }
+
+    .spinner {
+      width: 200px;
+      height: 200px;
+      border: 8px solid #ddd;
+      border-top: 8px solid #3498db;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    .spinner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 14px;
+      font-family: sans-serif;
+      color: #333;
+      text-align: center;
+      pointer-events: none;
+    }
+
+    @keyframes spin {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }

@@ -1,6 +1,7 @@
 import react, { useState, useEffect } from 'react';
 import useFetch from '../../hooks/useFetch';
-import { Link,useLocation  } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 
 const filterProducts = (catObj, query) => {
     const filteredProductsData = []
@@ -24,7 +25,7 @@ const SearchProduct = () => {
     const [selectedCategory, setSelectedCategory] = useState('all')
     const [query, setQuery] = useState('');
     const [filteredProducts, setFilteredProducts] = useState([]);
-    const location = useLocation(); 
+    const location = useLocation();
 
     useEffect(() => {
         if (prodList?.categories?.length > 0) {
@@ -58,29 +59,94 @@ const SearchProduct = () => {
 
 
     }, [query])
-   
+
 
     useEffect(() => {
         setQuery('');
+        setSelectedCategory('all')
     }, [location]);
 
     const handleCategoryChange = (e) => {
         setSelectedCategory(e.target.value); setQuery('')
     }
 
-    return (<>
+    const handleOnSearch = (string, results) => {
+        // onSearch will have as the first callback parameter
+        // the string searched and for the second the results.
+        console.log(string, results)
+    }
+
+    const handleOnHover = (result) => {
+        // the item hovered
+        console.log(result)
+    }
+
+    const handleOnSelect = (item) => {
+        // the item selected
+        console.log(item)
+    }
+
+    const handleOnFocus = () => {
+        console.log('Focused')
+    }
+
+    const formatResult = (item) => {
+        return (
+            <>
+                {/* <span style={{ display: 'block', textAlign: 'left' }}>id: {item.id}</span> */}
+                <span style={{ display: 'block', textAlign: 'left' }}>{item.name}</span>
+            </>
+        )
+    }
+
+    const items = [
+    {
+      id: 0,
+      name: 'Cobol'
+    },
+    {
+      id: 1,
+      name: 'JavaScript'
+    },
+    {
+      id: 2,
+      name: 'Basic'
+    },
+    {
+      id: 3,
+      name: 'PHP'
+    },
+    {
+      id: 4,
+      name: 'Java'
+    }
+  ]
+
+    return (<><div style={{ width: 400 }}>
+          <ReactSearchAutocomplete
+                items={items}
+                onSearch={handleOnSearch}
+                onHover={handleOnHover}
+                onSelect={handleOnSelect}
+                onFocus={handleOnFocus}
+                autoFocus
+                formatResult={formatResult}
+            /></div>
         <div className="font-Manrope cr-search relative max-[576px]:max-w-[350px] max-[576px]:m-auto">
-            <input
+            {/* <input
                 onChange={(e) => setQuery(e.target.value)}
                 value={query}
                 className="search-input w-[600px] h-[45px] pl-[15px] pr-[175px] border-[1px] border-solid border-[#64b496] rounded-[5px] outline-[0] max-[1400px]:w-[400px] max-[992px]:max-w-[350px] max-[576px]:w-full max-[420px]:pr-[45px] "
-                type="text" placeholder="Search For items..." />
-            <select
+                type="text" placeholder="Search For items..." /> */}
+                
+      
+            
+            {/* <select
                 value={selectedCategory}
                 onChange={handleCategoryChange}
                 className="form-select mr-[10px] w-[120px] h-[calc(100%-2px)] border-[0] tracking-[0] absolute top-[1px] pt-[0.375rem] pb-[0.375rem] pl-[0.5rem] outline-[0] right-[45px] text-[13px] border-l-[1px] border-solid border-[#64b496] rounded-[0] max-[420px]:hidden"
                 aria-label="Default select example">
-                <option value="all">All Categories</option>
+                <option value="all" key={'cat-all'}>All Categories</option>
                 {prodList?.categories?.length > 0 ?
                     prodList.categories.map((catObj, index) => {
                         return <option key={index + '-' + catObj.id} value={catObj.id}>{catObj.name}</option>
@@ -90,7 +156,7 @@ const SearchProduct = () => {
             <a href="javascript:void(0)"
                 className="search-btn w-[45px] bg-[#64b496] absolute right-[0] top-[0] bottom-[0] rounded-r-[5px] flex items-center justify-center">
                 <i className="ri-search-line text-[14px] text-[#fff]"></i>
-            </a>
+            </a> */}
             {filteredProducts?.length > 0 ?
                 <ul className='absolute bg-[#fff] w-full border-[1px] border-[solid] border-[#ccc] rounded-[5px] max-h-[300px] overflow-y-auto p-[10px]'>
                     {

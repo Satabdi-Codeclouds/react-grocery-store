@@ -1,4 +1,5 @@
 import React,{createContext,useEffect,useState} from 'react';
+import ToastService from './../utility/ToastService';
 
 export const CartContext = createContext();
 
@@ -26,6 +27,7 @@ export function CartProvider({children}) {
             }
             return [...prevItems,{...product,quantity:parseInt(quantity)}]
         })
+        ToastService.custom(`Itrem added to cart successfully`, { autoClose: 5000 })
     }
 
     const rempoveFromCart = (productId) => {
@@ -34,6 +36,7 @@ export function CartProvider({children}) {
                 return  (item.id) !== (productId);
             })
         })
+       ToastService.custom(`Itrem removed from cart successfully`, { autoClose: 5000 })
     }
 
     const clearCart = () => { 
@@ -46,6 +49,7 @@ export function CartProvider({children}) {
                 return item.id === productId ? {...item,quantity:item.quantity+1} : item
             })
         })
+         ToastService.custom(`Updated quantity successfully`, { autoClose: 5000 })
     }
 
     const decreaseQuantity = (productId) => {
@@ -54,6 +58,7 @@ export function CartProvider({children}) {
                return item.id === productId ? {...item,quantity:item.quantity-1} : item
             }).filter((item)=>item.quantity > 0)
         })
+        ToastService.custom(`Updated quantity successfully`, { autoClose: 5000 })
     }
 
     return (

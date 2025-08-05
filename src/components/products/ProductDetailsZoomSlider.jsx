@@ -1,24 +1,22 @@
-import React,{useState,useRef} from 'react'
+import React,{useState,useRef, useEffect} from 'react'
 import ReactImageMagnify from 'react-image-magnify';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-const ProductDetailsZoomSlider = () => {
-
-    const images = [
-        '/assets/images/1.jpg',
-        '/assets/images/2.jpg',
-        '/assets/images/3.jpg',
-         '/assets/images/12.jpg',
-          '/assets/images/13.jpg',
-           '/assets/images/14.jpg',
-    ];
-
-    const [selectedImage, setSelectedImage] = useState(images[0]);
+const ProductDetailsZoomSlider = ({pructItem}) => {
+    const [images,setImages] = useState([])
+    const [selectedImage, setSelectedImage] = useState(null);
      const [selectedIndex, setSelectedIndex] = useState(0);
      
+    useEffect(()=>{
+         if(pructItem?.imageURLs?.length > 0) {
+            setSelectedImage(pructItem.imageURLs[0])
+            setImages(pructItem.imageURLs)
+        }
+    },[pructItem])
+
      const swiperRef = useRef(null);
 
      const handleThumbnailClick = (index) => {
@@ -52,27 +50,28 @@ const ProductDetailsZoomSlider = () => {
     return (
         <>
             <div style={{ maxWidth: 500, margin: 'auto' }}>
-                <div style={{ border: '1px solid #eee', marginBottom: '10px' }}>
-                    <ReactImageMagnify
-                        {...{
-                            smallImage: {
-                                alt: 'Product Image',
-                                isFluidWidth: true,
-                                src: images[selectedIndex],
-                            },
-                            largeImage: {
-                                src: images[selectedIndex],
-                                width: 1200,
-                                height: 1200,
-                            },
-                            enlargedImagePosition: 'over', // zoom inside the image box
-                            isHintEnabled: true,
-                            hintTextMouse: 'Hover to zoom',
-                            imageClassName: 'product-main-image',
-                        }}
-                    />
-                </div>
-
+                {images?.length > 0 ? 
+                    <div style={{ border: '1px solid #eee', marginBottom: '10px' }}>
+                        <ReactImageMagnify
+                            {...{
+                                smallImage: {
+                                    alt: 'Product Image',
+                                    isFluidWidth: true,
+                                    src: images[selectedIndex],
+                                },
+                                largeImage: {
+                                    src: images[selectedIndex],
+                                    width: 1200,
+                                    height: 1200,
+                                },
+                                enlargedImagePosition: 'over', // zoom inside the image box
+                                isHintEnabled: true,
+                                hintTextMouse: 'Hover to zoom',
+                                imageClassName: 'product-main-image',
+                            }}
+                        />
+                    </div>
+                : ''}
                 <Swiper spaceBetween={10} 
                 slidesPerView={4}
                 navigation

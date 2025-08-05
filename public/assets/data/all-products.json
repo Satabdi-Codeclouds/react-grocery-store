@@ -10,8 +10,17 @@
           "price": 350,
           "unit": "500g",
           "inStock": true,
+          "Diet Type": "cake-milk",
           "rating": 4.6,
-          "imageUrl": "https://source.unsplash.com/featured/?chocolate-cake"
+          "Brand": "ESTA BETTERU C",
+          "Speciality": "Sweet milk layered cake",
+          "imageURLs": [
+            "/assets/images/featured/17.jpg",
+            "/assets/images/featured/18.jpg",
+            "/assets/images/featured/19.jpg",
+            "/assets/images/featured/20.jpg",
+            "/assets/images/featured/21.jpg"
+          ]
         },
         {
           "id": "cm2",
@@ -20,7 +29,16 @@
           "unit": "500g",
           "inStock": true,
           "rating": 4.2,
-          "imageUrl": "https://source.unsplash.com/featured/?vanilla-cake"
+          "Brand": "ESTA BETTERU C",
+          "Diet Type": "cake-milk",
+           "Speciality": "Homemade vanilla sponge",
+          "imageURLs": [
+            "/assets/images/featured/22.jpg",
+            "/assets/images/featured/23.jpg",
+            "/assets/images/featured/24.jpg",
+            "/assets/images/featured/25.jpg",
+            "/assets/images/featured/26.jpg"
+          ]
         },
         {
           "id": "cm3",
@@ -29,7 +47,16 @@
           "unit": "1 piece",
           "inStock": false,
           "rating": 4.8,
-          "imageUrl": "https://source.unsplash.com/featured/?cheesecake"
+          "Diet Type": "cake-milk",
+          "Brand": "ESTA BETTERU C",
+          "Speciality": "Freshly baked cheesecake",
+          "imageURLs": [
+            "/assets/images/featured/27.jpg",
+            "/assets/images/featured/28.jpg",
+            "/assets/images/featured/29.jpg",
+            "/assets/images/featured/30.jpg",
+            "/assets/images/featured/31.jpg"
+          ]
         },
         {
           "id": "cm4",
@@ -37,8 +64,17 @@
           "price": 60,
           "unit": "1L",
           "inStock": true,
+          "Diet Type": "cake-milk",
           "rating": 4.1,
-          "imageUrl": "https://source.unsplash.com/featured/?milk"
+          "Brand": "ESTA BETTERU C",
+          "Speciality": "Condensed milk cake",
+          "imageURLs": [
+            "/assets/images/featured/32.jpg",
+            "/assets/images/featured/33.jpg",
+            "/assets/images/featured/34.jpg",
+            "/assets/images/featured/35.jpg",
+            "/assets/images/featured/36.jpg"
+          ]
         },
         {
           "id": "cm5",
@@ -46,8 +82,17 @@
           "price": 50,
           "unit": "1L",
           "inStock": true,
+          "Diet Type": "cake-milk",
+          "Speciality": "Homemade milk cake",
           "rating": 3.9,
-          "imageUrl": "https://source.unsplash.com/featured/?toned-milk"
+          "Brand": "ESTA BETTERU C",
+          "imageURLs": [
+            "/assets/images/featured/37.jpg",
+            "/assets/images/featured/38.jpg",
+            "/assets/images/featured/39.jpg",
+            "/assets/images/featured/40.jpg",
+            "/assets/images/featured/41.jpg"
+          ]
         }
       ]
     },
@@ -61,8 +106,17 @@
           "price": 220,
           "unit": "500g",
           "inStock": true,
+          "Diet Type": "fresh-meat",
+          "Speciality": "Traditional Indian chicken curry",
           "rating": 4.5,
-          "imageUrl": "https://source.unsplash.com/featured/?chicken"
+          "Brand": "ESTA BETTERU C",
+          "imageURLs": [
+            "/assets/images/featured/42.jpg",
+            "/assets/images/featured/43.jpg",
+            "/assets/images/featured/44.jpg",
+            "/assets/images/featured/45.jpg",
+            "/assets/images/featured/46.jpg"
+          ]
         },
         {
           "id": "fm2",
@@ -70,17 +124,35 @@
           "price": 580,
           "unit": "500g",
           "inStock": false,
+          "Diet Type": "fresh-meat",
           "rating": 4.7,
-          "imageUrl": "https://source.unsplash.com/featured/?mutton"
+          "Brand": "ESTA BETTERU C",
+          "Speciality": "Premium quality mutton",
+          "imageURLs": [
+            "/assets/images/featured/47.jpg",
+            "/assets/images/featured/48.jpg",
+            "/assets/images/featured/49.jpg",
+            "/assets/images/featured/50.jpg",
+            "/assets/images/featured/51.jpg"
+          ]
         },
         {
           "id": "fm3",
           "name": "Beef Steak",
           "price": 490,
           "unit": "500g",
+          "Diet Type": "fresh-meat",
           "inStock": true,
           "rating": 4.3,
-          "imageUrl": "https://source.unsplash.com/featured/?beef"
+          "Brand": "ESTA BETTERU C",
+          "Speciality": "Succulent steak slices",
+          "imageURLs": [
+            "/assets/images/featured/52.jpg",
+            "/assets/images/featured/53.jpg",
+            "/assets/images/featured/54.jpg",
+            "/assets/images/featured/55.jpg",
+            "/assets/images/featured/56.jpg"
+          ]
         },
         {
           "id": "fm4",
@@ -88,8 +160,17 @@
           "price": 520,
           "unit": "500g",
           "inStock": true,
+          "Diet Type": "Prawns",
           "rating": 4.6,
-          "imageUrl": "https://source.unsplash.com/featured/?prawns"
+          "Brand": "ESTA BETTERU C",
+          "Speciality": "Deveined & cleaned prawns",
+          "imageURLs": [
+            "/assets/images/featured/57.jpg",
+            "/assets/images/featured/58.jpg",
+            "/assets/images/featured/59.jpg",
+            "/assets/images/featured/60.jpg",
+            "/assets/images/featured/61.jpg"
+          ]
         },
         {
           "id": "fm5",
@@ -98,7 +179,16 @@
           "unit": "500g",
           "inStock": true,
           "rating": 4.2,
-          "imageUrl": "https://source.unsplash.com/featured/?fish"
+          "Diet Type": "Fish",
+          "Brand": "ESTA BETTERU C",
+          "Speciality": "Tender & juicy fish",
+          "imageURLs": [
+            "/assets/images/featured/62.jpg",
+            "/assets/images/featured/63.jpg",
+            "/assets/images/featured/64.jpg",
+            "/assets/images/featured/65.jpg",
+            "/assets/images/featured/66.jpg"
+          ]
         }
       ]
     },
@@ -109,11 +199,20 @@
         {
           "id": "veg1",
           "name": "Tomato",
+          "Diet Type": "Vegetarian",
           "price": 35,
           "unit": "1kg",
           "inStock": true,
           "rating": 4.1,
-          "imageUrl": "https://source.unsplash.com/featured/?tomato"
+          "Brand": "ESTA BETTERU C",
+          "Speciality": "Fresh red tomatoes",
+          "imageURLs": [
+            "/assets/images/featured/67.jpg",
+            "/assets/images/featured/68.jpg",
+            "/assets/images/featured/69.jpg",
+            "/assets/images/featured/70.jpg",
+            "/assets/images/featured/71.jpg"
+          ]
         },
         {
           "id": "veg2",
@@ -121,17 +220,35 @@
           "price": 30,
           "unit": "1kg",
           "inStock": true,
+          "Diet Type": "Vegetarian",
           "rating": 4.0,
-          "imageUrl": "https://source.unsplash.com/featured/?onion"
+          "Brand": "ESTA BETTERU C",
+          "Speciality": "Farm-fresh onions",
+          "imageURLs": [
+            "/assets/images/featured/72.jpg",
+            "/assets/images/featured/73.jpg",
+            "/assets/images/featured/74.jpg",
+            "/assets/images/featured/75.jpg",
+            "/assets/images/featured/76.jpg"
+          ]
         },
         {
           "id": "veg3",
           "name": "Cabbage",
           "price": 25,
           "unit": "1 piece",
+          "Diet Type": "Vegetarian",
+          "Speciality": "Naturally grown cabbage",
           "inStock": true,
           "rating": 3.9,
-          "imageUrl": "https://source.unsplash.com/featured/?cabbage"
+          "Brand": "ESTA BETTERU C",
+          "imageURLs": [
+            "/assets/images/featured/77.jpg",
+            "/assets/images/featured/78.jpg",
+            "/assets/images/featured/79.jpg",
+            "/assets/images/featured/80.jpg",
+            "/assets/images/featured/81.jpg"
+          ]
         },
         {
           "id": "veg4",
@@ -139,17 +256,35 @@
           "price": 40,
           "unit": "500g",
           "inStock": false,
+          "Diet Type": "Vegetarian",
+          "Speciality": "Locally grown lady finger",
           "rating": 4.2,
-          "imageUrl": "https://source.unsplash.com/featured/?okra"
+          "Brand": "ESTA BETTERU C",
+          "imageURLs": [
+            "/assets/images/featured/82.jpg",
+            "/assets/images/featured/83.jpg",
+            "/assets/images/featured/84.jpg",
+            "/assets/images/featured/85.jpg",
+            "/assets/images/featured/86.jpg"
+          ]
         },
         {
           "id": "veg5",
           "name": "Green Peas",
           "price": 50,
           "unit": "500g",
+          "Speciality": "Garden-fresh peas",
+          "Diet Type": "Vegetarian",
           "inStock": true,
           "rating": 4.4,
-          "imageUrl": "https://source.unsplash.com/featured/?peas"
+          "Brand": "ESTA BETTERU C",
+          "imageURLs": [
+            "/assets/images/featured/87.jpg",
+            "/assets/images/featured/88.jpg",
+            "/assets/images/featured/89.jpg",
+            "/assets/images/featured/90.jpg",
+            "/assets/images/featured/91.jpg"
+          ]
         }
       ]
     },
@@ -163,26 +298,56 @@
           "price": 160,
           "unit": "1kg",
           "inStock": true,
+          "Flavour": "Apple",
+          "Diet Type": "Apple",
+          "Speciality": "Apples for pies",
           "rating": 4.5,
-          "imageUrl": "https://source.unsplash.com/featured/?fuji-apple"
+          "Brand": "ESTA BETTERU C",
+          "imageURLs": [
+            "/assets/images/featured/92.jpg",
+            "/assets/images/featured/93.jpg",
+            "/assets/images/featured/94.jpg",
+            "/assets/images/featured/95.jpg",
+            "/assets/images/featured/96.jpg"
+          ]
         },
         {
           "id": "am2",
           "name": "Apple (Green)",
           "price": 180,
           "unit": "1kg",
+          "Flavour": "Apple",
+          "Diet Type": "Apple",
+          "Speciality": "Apple chutney fruit",
           "inStock": false,
           "rating": 4.1,
-          "imageUrl": "https://source.unsplash.com/featured/?green-apple"
+          "Brand": "ESTA BETTERU C",
+          "imageURLs": [
+            "/assets/images/featured/97.jpg",
+            "/assets/images/featured/98.jpg",
+            "/assets/images/featured/99.jpg",
+            "/assets/images/featured/100.jpg",
+            "/assets/images/featured/101.jpg"
+          ]
         },
         {
           "id": "am3",
           "name": "Mango (Alphonso)",
           "price": 250,
           "unit": "1kg",
+          "Flavour": "Mango",
+          "Diet Type": "Mango",
+          "Speciality": "Handpicked mangoes",
           "inStock": true,
           "rating": 4.9,
-          "imageUrl": "https://source.unsplash.com/featured/?alphonso-mango"
+          "Brand": "ESTA BETTERU C",
+          "imageURLs": [
+            "/assets/images/featured/102.jpg",
+            "/assets/images/featured/103.jpg",
+            "/assets/images/featured/104.jpg",
+            "/assets/images/featured/105.jpg",
+            "/assets/images/featured/106.jpg"
+          ]
         },
         {
           "id": "am4",
@@ -190,8 +355,18 @@
           "price": 220,
           "unit": "1kg",
           "inStock": true,
+          "Flavour": "Mango",
+          "Speciality": "Handpicked mangoes",
+          "Diet Type": "Mango",
           "rating": 4.6,
-          "imageUrl": "https://source.unsplash.com/featured/?kesar-mango"
+          "Brand": "ESTA BETTERU C",
+          "imageURLs": [
+            "/assets/images/featured/107.jpg",
+            "/assets/images/featured/108.jpg",
+            "/assets/images/featured/109.jpg",
+            "/assets/images/featured/110.jpg",
+            "/assets/images/featured/111.jpg"
+          ]
         },
         {
           "id": "am5",
@@ -199,8 +374,18 @@
           "price": 170,
           "unit": "1kg",
           "inStock": true,
+          "Diet Type": "Apple",
+          "Speciality": "Juicy apples",
+          "Flavour": "Apple",
           "rating": 4.4,
-          "imageUrl": "https://source.unsplash.com/featured/?royal-gala-apple"
+          "Brand": "ESTA BETTERU C",
+          "imageURLs": [
+            "/assets/images/featured/112.jpg",
+            "/assets/images/featured/113.jpg",
+            "/assets/images/featured/114.jpg",
+            "/assets/images/featured/115.jpg",
+            "/assets/images/featured/116.jpg"
+          ]
         }
       ]
     },
@@ -214,8 +399,18 @@
           "price": 120,
           "unit": "250g",
           "inStock": true,
+          "Flavour": "Strawberry",
+          "Diet Type": "Strawberry",
+          "Speciality": "Gluten Free, Sugar Free",
           "rating": 4.8,
-          "imageUrl": "https://source.unsplash.com/featured/?strawberry"
+          "Brand": "ESTA BETTERU C",
+          "imageURLs": [
+            "/assets/images/featured/117.jpg",
+            "/assets/images/featured/118.jpg",
+            "/assets/images/featured/119.jpg",
+            "/assets/images/featured/120.jpg",
+            "/assets/images/featured/121.jpg"
+          ]
         },
         {
           "id": "sb2",
@@ -224,7 +419,17 @@
           "unit": "200g",
           "inStock": true,
           "rating": 4.2,
-          "imageUrl": "https://source.unsplash.com/featured/?strawberry-jam"
+          "Diet Type": "Strawberry",
+          "Flavour": "Strawberry",
+          "Speciality": "Gluten Free, Sugar Free",
+          "Brand": "ESTA BETTERU C",
+          "imageURLs": [
+            "/assets/images/featured/122.jpg",
+            "/assets/images/featured/123.jpg",
+            "/assets/images/featured/124.jpg",
+            "/assets/images/featured/125.jpg",
+            "/assets/images/featured/126.jpg"
+          ]
         },
         {
           "id": "sb3",
@@ -233,16 +438,36 @@
           "unit": "100g",
           "inStock": true,
           "rating": 4.3,
-          "imageUrl": "https://source.unsplash.com/featured/?strawberry-yogurt"
+          "Flavour": "Strawberry",
+          "Diet Type": "Strawberry",
+          "Speciality": "Gluten Free, Sugar Free",
+          "Brand": "ESTA BETTERU C",
+          "imageURLs": [
+            "/assets/images/featured/127.jpg",
+            "/assets/images/featured/128.jpg",
+            "/assets/images/featured/129.jpg",
+            "/assets/images/featured/130.jpg",
+            "/assets/images/featured/131.jpg"
+          ]
         },
         {
           "id": "sb4",
           "name": "Strawberry Juice",
           "price": 70,
           "unit": "200ml",
+          "Diet Type": "Strawberry",
           "inStock": false,
           "rating": 4.0,
-          "imageUrl": "https://source.unsplash.com/featured/?strawberry-juice"
+          "Flavour": "Strawberry",
+          "Speciality": "Gluten Free, Sugar Free",
+          "Brand": "ESTA BETTERU C",
+          "imageURLs": [
+            "/assets/images/featured/127.jpg",
+            "/assets/images/featured/128.jpg",
+            "/assets/images/featured/129.jpg",
+            "/assets/images/featured/130.jpg",
+            "/assets/images/featured/131.jpg"
+          ]
         },
         {
           "id": "sb5",
@@ -251,7 +476,17 @@
           "unit": "500g",
           "inStock": true,
           "rating": 4.6,
-          "imageUrl": "https://source.unsplash.com/featured/?frozen-strawberry"
+          "Flavour": "Strawberry",
+          "Diet Type": "Strawberry",
+          "Brand": "ESTA BETTERU C",
+          "Speciality": "Gluten Free, Sugar Free",
+          "imageURLs": [
+            "/assets/images/featured/132.jpg",
+            "/assets/images/featured/133.jpg",
+            "/assets/images/featured/134.jpg",
+            "/assets/images/featured/135.jpg",
+            "/assets/images/featured/136.jpg"
+          ]
         }
       ]
     }

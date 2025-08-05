@@ -63,7 +63,7 @@ function PopularProducts() {
                     <div className="flex flex-wrap w-full">
                         <div className="w-full px-[12px]">
                             <div className="mb-[30px]">
-                                <div className="cr-banner mb-[15px] text-center">
+                                <div className="cr-banner mb-[15px] text-center max-[1200px]:pt-[70px]">
                                     <h2 className="font-Manrope text-[32px] font-bold leading-[1.2] text-[#2b2b2d] max-[1200px]:text-[28px] max-[992px]:text-[25px] max-[768px]:text-[22px]">Popular Products</h2>
                                 </div>
                                 <div className="cr-banner-sub-title w-full">

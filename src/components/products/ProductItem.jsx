@@ -17,8 +17,11 @@ const ProductItem = ({ productItem, categoryObj, fromRelatedProduct = false }) =
                 <div className="cr-product-card h-full p-[12px] border-[1px] border-solid border-[#e9e9e9] bg-[#fff] rounded-[5px] overflow-hidden flex-col max-[480px]:w-full">
                     <div className="cr-product-image rounded-[5px] flex items-center justify-center relative">
                         <div className="cr-image-inner zoom-image-hover w-full h-full flex items-center justify-center relative overflow-hidden max-[992px]:pointer-events-none" style={{ position: 'relative', overflow: 'hidden' }}>
-                            <img src="/assets/images/17.jpg" alt="product-1" className="w-full rounded-[5px]" />
-                            <img role="presentation" alt="" src="/assets/images/17.jpg" className="zoomImg" style={{
+                            {/* <img src="/assets/images/17.jpg" alt="product-1" className="w-full rounded-[5px]" /> */}
+                            <img src={productItem?.imageURLs?.length > 0 ? productItem?.imageURLs[0] : '/assets/images/17.jpg'} 
+                            alt={productItem?.name} 
+                            className="w-full rounded-[5px]" />
+                            {/* <img role="presentation" alt="" src="/assets/images/17.jpg" className="zoomImg" style={{
                                 position: "absolute",
                                 top: "-93.5515px",
                                 left: "-86.2208px",
@@ -28,7 +31,8 @@ const ProductItem = ({ productItem, categoryObj, fromRelatedProduct = false }) =
                                 border: "none",
                                 maxWidth: "none",
                                 maxHeight: "none",
-                            }} /></div>
+                            }} /> */}
+                            </div>
                         <div className="cr-side-view transition-all duration-[0.4s] ease-in-out absolute z-[20] top-[15px] right-[-40px] grid opacity-0 max-[992px]:right-[12px]">
                             {
                                 !fromWishListPage ?

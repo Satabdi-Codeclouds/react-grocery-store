@@ -50,7 +50,7 @@ function ProductDetails() {
                                 <div className="min-[768px]:w-[50%] w-full px-[12px] mb-[24px]">
                                     <div className="vehicle-detail-banner banner-content clearfix h-full">
                                         <div className="banner-slider sticky top-[30px]">
-                                            <ProductDetailsZoomSlider />
+                                            <ProductDetailsZoomSlider pructItem={pructItem}/>
                                         </div>
                                     </div>
                                 </div>

@@ -3,6 +3,7 @@ import { CartContext } from "../../context/CartContext";
 import { useContext, useState } from "react";
 import { WishListContext } from '../../context/WishListContext';
 import QuickViewProduct from './QuickViewProduct';
+import Rating from './Rating';
 
 const ProductItem = ({ productItem, categoryObj, fromRelatedProduct = false }) => {
     const { addToCart } = useContext(CartContext)
@@ -37,10 +38,10 @@ const ProductItem = ({ productItem, categoryObj, fromRelatedProduct = false }) =
                             {
                                 !fromWishListPage ?
                                     <button type="button" onClick={(e) => toggleWishList({ ...productItem, catId: categoryObj.id })} className="wishlist h-[35px] w-[35px] flex items-center justify-center m-0 p-0 bg-[#fff] border-[1px] border-solid border-[#e9e9e9] rounded-[100%]">
-                                        <i className="ri-heart-line text-[18px] leading-[10px]"></i>
+                                        <i className={`ri-heart-line text-[18px] leading-[10px] ${isWished(productItem?.id) ? ' wished-icon' : ''}`}></i>
                                     </button>
                                     : <button onClick={(e)=>{return toggleWishList({ ...productItem, catId: categoryObj.id })}}  type="button" className="cr-remove-product w-[35px] h-[35px] bg-black text-white flex items-center justify-center mb-[5px] border border-[#e9e9e9] rounded-full">
-                                        <i className="ri-close-line text-[18px] leading-[10px]"></i>
+                                        <i className="ri-close-line text-[18px] leading-[10px] ]"></i>
                                     </button>
                             }
                             <button onClick={(e)=>{return setIsOpenQuickView(true)}} type="button" className="model-oraganic-product h-[35px] w-[35px] flex items-center justify-center m-0 p-0 bg-[#fff] border-[1px] border-solid border-[#e9e9e9] rounded-[100%] mt-[5px] cursor-pointer cr-modal-toggle">
@@ -55,18 +56,20 @@ const ProductItem = ({ productItem, categoryObj, fromRelatedProduct = false }) =
                         <div className="cr-brand">
                             <a href="shop-left-sidebar.html" className="transition-all duration-[0.3s] ease-in-out mb-[5px] text-[13px] text-[#777] flex justify-center">Bakery</a>
                             <div className="cr-star mb-[12px] flex justify-center items-center">
+                                {/* <i className="ri-star-fill mx-[1px] text-[15px] text-[#f5885f]"></i>
                                 <i className="ri-star-fill mx-[1px] text-[15px] text-[#f5885f]"></i>
                                 <i className="ri-star-fill mx-[1px] text-[15px] text-[#f5885f]"></i>
                                 <i className="ri-star-fill mx-[1px] text-[15px] text-[#f5885f]"></i>
                                 <i className="ri-star-fill mx-[1px] text-[15px] text-[#f5885f]"></i>
-                                <i className="ri-star-fill mx-[1px] text-[15px] text-[#f5885f]"></i>
-                                <p className="mb-[0] font-Poppins ml-[5px] text-[#999] text-[11px] leading-[10px]">(5.0)</p>
+                                <p className="mb-[0] font-Poppins ml-[5px] text-[#999] text-[11px] leading-[10px]">(5.0)</p> */}
+                                <Rating ratingScore={productItem.rating}/>
+                                 <p className="mb-[0] font-Poppins ml-[5px] text-[#999] text-[11px] leading-[10px]">({productItem.rating})</p>
                             </div>
                         </div>
                         <Link to={'/product-details/' + productItem?.id + '?catId=' + categoryObj?.id} className="title transition-all duration-[0.3s] ease-in-out mb-[12px] font-Poppins text-[15px] font-medium leading-[24px] text-[#2b2b2d] hover:text-[#64b496] flex justify-center">{productItem?.name}</Link>
                         <p className="cr-price font-Poppins text-[16px] text-[#7a7a7a] leading-[1.75] max-[1200px]:text-[14px]">
                             <span className="new-price font-Poppins text-[16px] leading-[1.75] max-[1200px]:text-[14px] font-bold text-[#64b496]">${productItem?.price}</span>
-                            <span className="old-price font-Poppins ml-[5px] leading-[1.75] text-[13px] line-through text-[#7a7a7a] max-[1200px]:text-[12px]">$22.10</span>
+                            <span className="old-price font-Poppins ml-[5px] leading-[1.75] text-[13px] line-through text-[#7a7a7a] max-[1200px]:text-[12px]">${productItem?.actualPrice}</span>
                         </p>
                         {/* <div className="cr-add-button ml-[15px] max-[380px]:hidden">
                         <button onClick={(e)=>{e.stopPropagation();return addToCart(productItem)}} type="button" className="cr-button cr-shopping-bag font-bold h-[40px] transition-all duration-[0.3s] ease-in-out py-[8px] px-[22px] text-[14px] font-Manrope capitalize leading-[1.2] bg-[#64b496] text-[#fff] border-[1px] border-solid border-[#64b496] rounded-[5px] flex items-center justify-center hover:bg-[#000] hover:border-[#000] max-[1200px]:py-[8px] max-[1200px]:px-[15px]">Add to cart</button>

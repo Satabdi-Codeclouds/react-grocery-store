@@ -1,301 +1,261 @@
 {
   "categories": [
-    {
+     {
       "id": "cake-milk",
       "name": "Cake & Milk",
+      "images": ["/assets/images/categories/3.jpg", "/assets/images/categories/4.jpg"],
       "products": [
         {
           "id": "cm1",
           "name": "Chocolate Cake",
-          "price": 350,
+          "description": "Rich and moist chocolate cake layered with sweet milk cream, perfect for celebrations.",
+          "price": 169,
           "unit": "500g",
           "inStock": true,
           "Diet Type": "cake-milk",
           "rating": 4.6,
           "Brand": "ESTA BETTERU C",
           "Speciality": "Sweet milk layered cake",
-          "imageURLs": [
-            "/assets/images/featured/17.jpg",
-            "/assets/images/featured/18.jpg",
-            "/assets/images/featured/19.jpg",
-            "/assets/images/featured/20.jpg",
-            "/assets/images/featured/21.jpg"
-          ]
+          "imageURLs": ["/assets/images/featured/17.jpg", "/assets/images/featured/18.jpg", "/assets/images/featured/19.jpg", "/assets/images/featured/20.jpg", "/assets/images/featured/21.jpg"],
+          "actualPrice": 200,
+          "discount": 16
         },
         {
           "id": "cm2",
           "name": "Vanilla Sponge Cake",
-          "price": 300,
+          "description": "Soft and fluffy vanilla sponge cake with homemade texture and delicate sweetness.",
+          "price": 284,
           "unit": "500g",
           "inStock": true,
           "rating": 4.2,
           "Brand": "ESTA BETTERU C",
           "Diet Type": "cake-milk",
-           "Speciality": "Homemade vanilla sponge",
-          "imageURLs": [
-            "/assets/images/featured/22.jpg",
-            "/assets/images/featured/23.jpg",
-            "/assets/images/featured/24.jpg",
-            "/assets/images/featured/25.jpg",
-            "/assets/images/featured/26.jpg"
-          ]
+          "Speciality": "Homemade vanilla sponge",
+          "imageURLs": ["/assets/images/featured/22.jpg", "/assets/images/featured/23.jpg", "/assets/images/featured/24.jpg", "/assets/images/featured/25.jpg", "/assets/images/featured/26.jpg"],
+          "actualPrice": 400,
+          "discount": 29
         },
         {
           "id": "cm3",
           "name": "Cheesecake",
-          "price": 450,
+          "description": "Classic freshly baked cheesecake with a creamy filling and a buttery crust.",
+          "price": 235,
           "unit": "1 piece",
           "inStock": false,
           "rating": 4.8,
           "Diet Type": "cake-milk",
           "Brand": "ESTA BETTERU C",
           "Speciality": "Freshly baked cheesecake",
-          "imageURLs": [
-            "/assets/images/featured/27.jpg",
-            "/assets/images/featured/28.jpg",
-            "/assets/images/featured/29.jpg",
-            "/assets/images/featured/30.jpg",
-            "/assets/images/featured/31.jpg"
-          ]
+          "imageURLs": ["/assets/images/featured/27.jpg", "/assets/images/featured/28.jpg", "/assets/images/featured/29.jpg", "/assets/images/featured/30.jpg", "/assets/images/featured/31.jpg"],
+          "actualPrice": 305,
+          "discount": 23
         },
         {
           "id": "cm4",
           "name": "Milk (Full Cream)",
-          "price": 60,
+          "description": "Rich and creamy full cream milk, ideal for desserts, beverages, and cooking.",
+          "price": 108,
           "unit": "1L",
           "inStock": true,
           "Diet Type": "cake-milk",
           "rating": 4.1,
           "Brand": "ESTA BETTERU C",
           "Speciality": "Condensed milk cake",
-          "imageURLs": [
-            "/assets/images/featured/32.jpg",
-            "/assets/images/featured/33.jpg",
-            "/assets/images/featured/34.jpg",
-            "/assets/images/featured/35.jpg",
-            "/assets/images/featured/36.jpg"
-          ]
+          "imageURLs": ["/assets/images/featured/32.jpg", "/assets/images/featured/33.jpg", "/assets/images/featured/34.jpg", "/assets/images/featured/35.jpg", "/assets/images/featured/36.jpg"],
+          "actualPrice": 117,
+          "discount": 8
         },
         {
           "id": "cm5",
           "name": "Milk (Toned)",
-          "price": 50,
+          "description": "Healthy toned milk with reduced fat, suitable for everyday use.",
+          "price": 120,
           "unit": "1L",
           "inStock": true,
           "Diet Type": "cake-milk",
           "Speciality": "Homemade milk cake",
           "rating": 3.9,
           "Brand": "ESTA BETTERU C",
-          "imageURLs": [
-            "/assets/images/featured/37.jpg",
-            "/assets/images/featured/38.jpg",
-            "/assets/images/featured/39.jpg",
-            "/assets/images/featured/40.jpg",
-            "/assets/images/featured/41.jpg"
-          ]
+          "imageURLs": ["/assets/images/featured/37.jpg", "/assets/images/featured/38.jpg", "/assets/images/featured/39.jpg", "/assets/images/featured/40.jpg", "/assets/images/featured/41.jpg"],
+          "actualPrice": 152,
+          "discount": 21
         }
       ]
     },
     {
       "id": "fresh-meat",
       "name": "Fresh Meat",
+      "images": ["/assets/images/categories/1.jpg", "/assets/images/categories/2.jpg"],
       "products": [
         {
           "id": "fm1",
           "name": "Chicken Curry Cut",
-          "price": 220,
+          "description": "Fresh chicken curry cut pieces, cleaned and ready to cook for delicious curries.",
+          "price": 179,
           "unit": "500g",
           "inStock": true,
           "Diet Type": "fresh-meat",
           "Speciality": "Traditional Indian chicken curry",
           "rating": 4.5,
           "Brand": "ESTA BETTERU C",
-          "imageURLs": [
-            "/assets/images/featured/42.jpg",
-            "/assets/images/featured/43.jpg",
-            "/assets/images/featured/44.jpg",
-            "/assets/images/featured/45.jpg",
-            "/assets/images/featured/46.jpg"
-          ]
+          "imageURLs": ["/assets/images/featured/42.jpg", "/assets/images/featured/43.jpg", "/assets/images/featured/44.jpg", "/assets/images/featured/45.jpg", "/assets/images/featured/46.jpg"],
+          "actualPrice": 236,
+          "discount": 24
         },
         {
           "id": "fm2",
           "name": "Goat Mutton",
-          "price": 580,
+          "description": "Premium quality goat mutton with rich taste, perfect for traditional recipes.",
+          "price": 425,
           "unit": "500g",
           "inStock": false,
           "Diet Type": "fresh-meat",
           "rating": 4.7,
           "Brand": "ESTA BETTERU C",
           "Speciality": "Premium quality mutton",
-          "imageURLs": [
-            "/assets/images/featured/47.jpg",
-            "/assets/images/featured/48.jpg",
-            "/assets/images/featured/49.jpg",
-            "/assets/images/featured/50.jpg",
-            "/assets/images/featured/51.jpg"
-          ]
+          "imageURLs": ["/assets/images/featured/47.jpg", "/assets/images/featured/48.jpg", "/assets/images/featured/49.jpg", "/assets/images/featured/50.jpg", "/assets/images/featured/51.jpg"],
+          "actualPrice": 601,
+          "discount": 29
         },
         {
           "id": "fm3",
           "name": "Beef Steak",
-          "price": 490,
+          "description": "Tender and succulent beef steak slices, perfect for grilling or pan-frying.",
+          "price": 509,
           "unit": "500g",
           "Diet Type": "fresh-meat",
           "inStock": true,
           "rating": 4.3,
           "Brand": "ESTA BETTERU C",
           "Speciality": "Succulent steak slices",
-          "imageURLs": [
-            "/assets/images/featured/52.jpg",
-            "/assets/images/featured/53.jpg",
-            "/assets/images/featured/54.jpg",
-            "/assets/images/featured/55.jpg",
-            "/assets/images/featured/56.jpg"
-          ]
+          "imageURLs": ["/assets/images/featured/52.jpg", "/assets/images/featured/53.jpg", "/assets/images/featured/54.jpg", "/assets/images/featured/55.jpg", "/assets/images/featured/56.jpg"],
+          "actualPrice": 595,
+          "discount": 14
         },
         {
           "id": "fm4",
           "name": "Prawns (Large)",
-          "price": 520,
+          "description": "Large cleaned and deveined prawns, perfect for curries, grills, and stir-fries.",
+          "price": 464,
           "unit": "500g",
           "inStock": true,
           "Diet Type": "Prawns",
           "rating": 4.6,
           "Brand": "ESTA BETTERU C",
           "Speciality": "Deveined & cleaned prawns",
-          "imageURLs": [
-            "/assets/images/featured/57.jpg",
-            "/assets/images/featured/58.jpg",
-            "/assets/images/featured/59.jpg",
-            "/assets/images/featured/60.jpg",
-            "/assets/images/featured/61.jpg"
-          ]
+          "imageURLs": ["/assets/images/featured/57.jpg", "/assets/images/featured/58.jpg", "/assets/images/featured/59.jpg", "/assets/images/featured/60.jpg", "/assets/images/featured/61.jpg"],
+          "actualPrice": 622,
+          "discount": 25
         },
         {
           "id": "fm5",
           "name": "Fish (Rohu Slices)",
-          "price": 280,
+          "description": "Fresh rohu fish slices, tender and juicy, perfect for frying or curry.",
+          "price": 294,
           "unit": "500g",
           "inStock": true,
           "rating": 4.2,
           "Diet Type": "Fish",
           "Brand": "ESTA BETTERU C",
           "Speciality": "Tender & juicy fish",
-          "imageURLs": [
-            "/assets/images/featured/62.jpg",
-            "/assets/images/featured/63.jpg",
-            "/assets/images/featured/64.jpg",
-            "/assets/images/featured/65.jpg",
-            "/assets/images/featured/66.jpg"
-          ]
+          "imageURLs": ["/assets/images/featured/62.jpg", "/assets/images/featured/63.jpg", "/assets/images/featured/64.jpg", "/assets/images/featured/65.jpg", "/assets/images/featured/66.jpg"],
+          "actualPrice": 367,
+          "discount": 20
         }
       ]
     },
     {
       "id": "vegetables",
       "name": "Vegetables",
+      "images": ["/assets/images/categories/5.jpg", "/assets/images/categories/6.jpg"],
       "products": [
         {
           "id": "veg1",
           "name": "Tomato",
+          "description": "Fresh red tomatoes, juicy and ideal for salads, sauces, and curries.",
           "Diet Type": "Vegetarian",
-          "price": 35,
+          "price": 61,
           "unit": "1kg",
           "inStock": true,
           "rating": 4.1,
           "Brand": "ESTA BETTERU C",
           "Speciality": "Fresh red tomatoes",
-          "imageURLs": [
-            "/assets/images/featured/67.jpg",
-            "/assets/images/featured/68.jpg",
-            "/assets/images/featured/69.jpg",
-            "/assets/images/featured/70.jpg",
-            "/assets/images/featured/71.jpg"
-          ]
+          "imageURLs": ["/assets/images/featured/67.jpg", "/assets/images/featured/68.jpg", "/assets/images/featured/69.jpg", "/assets/images/featured/70.jpg", "/assets/images/featured/71.jpg"],
+          "actualPrice": 67,
+          "discount": 9
         },
         {
           "id": "veg2",
           "name": "Onion",
-          "price": 30,
+          "description": "Farm-fresh onions with rich flavor, essential for everyday cooking.",
+          "price": 95,
           "unit": "1kg",
           "inStock": true,
           "Diet Type": "Vegetarian",
-          "rating": 4.0,
+          "rating": 4,
           "Brand": "ESTA BETTERU C",
           "Speciality": "Farm-fresh onions",
-          "imageURLs": [
-            "/assets/images/featured/72.jpg",
-            "/assets/images/featured/73.jpg",
-            "/assets/images/featured/74.jpg",
-            "/assets/images/featured/75.jpg",
-            "/assets/images/featured/76.jpg"
-          ]
+          "imageURLs": ["/assets/images/featured/72.jpg", "/assets/images/featured/73.jpg", "/assets/images/featured/74.jpg", "/assets/images/featured/75.jpg", "/assets/images/featured/76.jpg"],
+          "actualPrice": 117,
+          "discount": 19
         },
         {
           "id": "veg3",
           "name": "Cabbage",
-          "price": 25,
+          "description": "Naturally grown fresh cabbage, ideal for salads, soups, and stir-fries.",
+          "price": 93,
           "unit": "1 piece",
           "Diet Type": "Vegetarian",
           "Speciality": "Naturally grown cabbage",
           "inStock": true,
           "rating": 3.9,
           "Brand": "ESTA BETTERU C",
-          "imageURLs": [
-            "/assets/images/featured/77.jpg",
-            "/assets/images/featured/78.jpg",
-            "/assets/images/featured/79.jpg",
-            "/assets/images/featured/80.jpg",
-            "/assets/images/featured/81.jpg"
-          ]
+          "imageURLs": ["/assets/images/featured/77.jpg", "/assets/images/featured/78.jpg", "/assets/images/featured/79.jpg", "/assets/images/featured/80.jpg", "/assets/images/featured/81.jpg"],
+          "actualPrice": 106,
+          "discount": 12
         },
         {
           "id": "veg4",
           "name": "Lady Finger",
-          "price": 40,
+          "description": "Fresh lady fingers, locally grown, perfect for curries and frying.",
+          "price": 59,
           "unit": "500g",
           "inStock": false,
           "Diet Type": "Vegetarian",
           "Speciality": "Locally grown lady finger",
           "rating": 4.2,
           "Brand": "ESTA BETTERU C",
-          "imageURLs": [
-            "/assets/images/featured/82.jpg",
-            "/assets/images/featured/83.jpg",
-            "/assets/images/featured/84.jpg",
-            "/assets/images/featured/85.jpg",
-            "/assets/images/featured/86.jpg"
-          ]
+          "imageURLs": ["/assets/images/featured/82.jpg", "/assets/images/featured/83.jpg", "/assets/images/featured/84.jpg", "/assets/images/featured/85.jpg", "/assets/images/featured/86.jpg"],
+          "actualPrice": 69,
+          "discount": 14
         },
         {
           "id": "veg5",
           "name": "Green Peas",
-          "price": 50,
+          "description": "Garden-fresh green peas, sweet and tender, great for curries and snacks.",
+          "price": 109,
           "unit": "500g",
           "Speciality": "Garden-fresh peas",
           "Diet Type": "Vegetarian",
           "inStock": true,
           "rating": 4.4,
           "Brand": "ESTA BETTERU C",
-          "imageURLs": [
-            "/assets/images/featured/87.jpg",
-            "/assets/images/featured/88.jpg",
-            "/assets/images/featured/89.jpg",
-            "/assets/images/featured/90.jpg",
-            "/assets/images/featured/91.jpg"
-          ]
+          "imageURLs": ["/assets/images/featured/87.jpg", "/assets/images/featured/88.jpg", "/assets/images/featured/89.jpg", "/assets/images/featured/90.jpg", "/assets/images/featured/91.jpg"],
+          "actualPrice": 120,
+          "discount": 9
         }
       ]
     },
     {
       "id": "apple-mango",
       "name": "Apple & Mango",
+      "images": ["/assets/images/categories/7.jpg", "/assets/images/categories/8.jpg"],
       "products": [
         {
           "id": "am1",
           "name": "Apple (Fuji)",
-          "price": 160,
+          "description": "Crisp and juicy Fuji apples, naturally sweet and perfect for snacking or baking.",
+          "price": 208,
           "unit": "1kg",
           "inStock": true,
           "Flavour": "Apple",
@@ -303,18 +263,15 @@
           "Speciality": "Apples for pies",
           "rating": 4.5,
           "Brand": "ESTA BETTERU C",
-          "imageURLs": [
-            "/assets/images/featured/92.jpg",
-            "/assets/images/featured/93.jpg",
-            "/assets/images/featured/94.jpg",
-            "/assets/images/featured/95.jpg",
-            "/assets/images/featured/96.jpg"
-          ]
+          "imageURLs": ["/assets/images/featured/92.jpg", "/assets/images/featured/93.jpg", "/assets/images/featured/94.jpg", "/assets/images/featured/95.jpg", "/assets/images/featured/96.jpg"],
+          "actualPrice": 222,
+          "discount": 6
         },
         {
           "id": "am2",
           "name": "Apple (Green)",
-          "price": 180,
+          "description": "Tangy and crisp green apples, great for salads, juices, and chutneys.",
+          "price": 141,
           "unit": "1kg",
           "Flavour": "Apple",
           "Diet Type": "Apple",
@@ -322,18 +279,15 @@
           "inStock": false,
           "rating": 4.1,
           "Brand": "ESTA BETTERU C",
-          "imageURLs": [
-            "/assets/images/featured/97.jpg",
-            "/assets/images/featured/98.jpg",
-            "/assets/images/featured/99.jpg",
-            "/assets/images/featured/100.jpg",
-            "/assets/images/featured/101.jpg"
-          ]
+          "imageURLs": ["/assets/images/featured/97.jpg", "/assets/images/featured/98.jpg", "/assets/images/featured/99.jpg", "/assets/images/featured/100.jpg", "/assets/images/featured/101.jpg"],
+          "actualPrice": 200,
+          "discount": 30
         },
         {
           "id": "am3",
           "name": "Mango (Alphonso)",
-          "price": 250,
+          "description": "Sweet and juicy Alphonso mangoes, handpicked for their rich flavor and aroma.",
+          "price": 294,
           "unit": "1kg",
           "Flavour": "Mango",
           "Diet Type": "Mango",
@@ -341,18 +295,15 @@
           "inStock": true,
           "rating": 4.9,
           "Brand": "ESTA BETTERU C",
-          "imageURLs": [
-            "/assets/images/featured/102.jpg",
-            "/assets/images/featured/103.jpg",
-            "/assets/images/featured/104.jpg",
-            "/assets/images/featured/105.jpg",
-            "/assets/images/featured/106.jpg"
-          ]
+          "imageURLs": ["/assets/images/featured/102.jpg", "/assets/images/featured/103.jpg", "/assets/images/featured/104.jpg", "/assets/images/featured/105.jpg", "/assets/images/featured/106.jpg"],
+          "actualPrice": 340,
+          "discount": 14
         },
         {
           "id": "am4",
           "name": "Mango (Kesar)",
-          "price": 220,
+          "description": "Naturally sweet and aromatic Kesar mangoes, perfect for desserts and juices.",
+          "price": 235,
           "unit": "1kg",
           "inStock": true,
           "Flavour": "Mango",
@@ -360,18 +311,15 @@
           "Diet Type": "Mango",
           "rating": 4.6,
           "Brand": "ESTA BETTERU C",
-          "imageURLs": [
-            "/assets/images/featured/107.jpg",
-            "/assets/images/featured/108.jpg",
-            "/assets/images/featured/109.jpg",
-            "/assets/images/featured/110.jpg",
-            "/assets/images/featured/111.jpg"
-          ]
+          "imageURLs": ["/assets/images/featured/107.jpg", "/assets/images/featured/108.jpg", "/assets/images/featured/109.jpg", "/assets/images/featured/110.jpg", "/assets/images/featured/111.jpg"],
+          "actualPrice": 256,
+          "discount": 8
         },
         {
           "id": "am5",
           "name": "Apple (Royal Gala)",
-          "price": 170,
+          "description": "Sweet and juicy Royal Gala apples, ideal for healthy snacking and fruit salads.",
+          "price": 222,
           "unit": "1kg",
           "inStock": true,
           "Diet Type": "Apple",
@@ -379,116 +327,131 @@
           "Flavour": "Apple",
           "rating": 4.4,
           "Brand": "ESTA BETTERU C",
-          "imageURLs": [
-            "/assets/images/featured/112.jpg",
-            "/assets/images/featured/113.jpg",
-            "/assets/images/featured/114.jpg",
-            "/assets/images/featured/115.jpg",
-            "/assets/images/featured/116.jpg"
-          ]
+          "imageURLs": ["/assets/images/featured/112.jpg", "/assets/images/featured/113.jpg", "/assets/images/featured/114.jpg", "/assets/images/featured/115.jpg", "/assets/images/featured/116.jpg"],
+          "actualPrice": 248,
+          "discount": 10
         }
       ]
     },
-    {
-      "id": "strawberry",
-      "name": "Strawberry",
-      "products": [
-        {
-          "id": "sb1",
-          "name": "Fresh Strawberry",
-          "price": 120,
-          "unit": "250g",
-          "inStock": true,
-          "Flavour": "Strawberry",
-          "Diet Type": "Strawberry",
-          "Speciality": "Gluten Free, Sugar Free",
-          "rating": 4.8,
-          "Brand": "ESTA BETTERU C",
-          "imageURLs": [
-            "/assets/images/featured/117.jpg",
-            "/assets/images/featured/118.jpg",
-            "/assets/images/featured/119.jpg",
-            "/assets/images/featured/120.jpg",
-            "/assets/images/featured/121.jpg"
-          ]
-        },
-        {
-          "id": "sb2",
-          "name": "Strawberry Jam",
-          "price": 85,
-          "unit": "200g",
-          "inStock": true,
-          "rating": 4.2,
-          "Diet Type": "Strawberry",
-          "Flavour": "Strawberry",
-          "Speciality": "Gluten Free, Sugar Free",
-          "Brand": "ESTA BETTERU C",
-          "imageURLs": [
-            "/assets/images/featured/122.jpg",
-            "/assets/images/featured/123.jpg",
-            "/assets/images/featured/124.jpg",
-            "/assets/images/featured/125.jpg",
-            "/assets/images/featured/126.jpg"
-          ]
-        },
-        {
-          "id": "sb3",
-          "name": "Strawberry Yogurt",
-          "price": 50,
-          "unit": "100g",
-          "inStock": true,
-          "rating": 4.3,
-          "Flavour": "Strawberry",
-          "Diet Type": "Strawberry",
-          "Speciality": "Gluten Free, Sugar Free",
-          "Brand": "ESTA BETTERU C",
-          "imageURLs": [
-            "/assets/images/featured/127.jpg",
-            "/assets/images/featured/128.jpg",
-            "/assets/images/featured/129.jpg",
-            "/assets/images/featured/130.jpg",
-            "/assets/images/featured/131.jpg"
-          ]
-        },
-        {
-          "id": "sb4",
-          "name": "Strawberry Juice",
-          "price": 70,
-          "unit": "200ml",
-          "Diet Type": "Strawberry",
-          "inStock": false,
-          "rating": 4.0,
-          "Flavour": "Strawberry",
-          "Speciality": "Gluten Free, Sugar Free",
-          "Brand": "ESTA BETTERU C",
-          "imageURLs": [
-            "/assets/images/featured/127.jpg",
-            "/assets/images/featured/128.jpg",
-            "/assets/images/featured/129.jpg",
-            "/assets/images/featured/130.jpg",
-            "/assets/images/featured/131.jpg"
-          ]
-        },
-        {
-          "id": "sb5",
-          "name": "Frozen Strawberry",
-          "price": 140,
-          "unit": "500g",
-          "inStock": true,
-          "rating": 4.6,
-          "Flavour": "Strawberry",
-          "Diet Type": "Strawberry",
-          "Brand": "ESTA BETTERU C",
-          "Speciality": "Gluten Free, Sugar Free",
-          "imageURLs": [
-            "/assets/images/featured/132.jpg",
-            "/assets/images/featured/133.jpg",
-            "/assets/images/featured/134.jpg",
-            "/assets/images/featured/135.jpg",
-            "/assets/images/featured/136.jpg"
-          ]
-        }
-      ]
-    }
+    { 
+    "id": "strawberry",
+    "name": "Strawberry",
+    "images": [
+      "/assets/images/categories/9.jpg",
+      "/assets/images/categories/10.jpg"
+    ],
+    "products": [
+      {
+        "id": "sb1",
+        "name": "Fresh Strawberry",
+        "price": 123,
+        "unit": "250g",
+        "inStock": true,
+        "Flavour": "Strawberry",
+        "Diet Type": "Strawberry",
+        "Speciality": "Gluten Free, Sugar Free",
+        "rating": 4.8,
+        "Brand": "ESTA BETTERU C",
+        "imageURLs": [
+          "/assets/images/featured/117.jpg",
+          "/assets/images/featured/118.jpg",
+          "/assets/images/featured/119.jpg",
+          "/assets/images/featured/120.jpg",
+          "/assets/images/featured/121.jpg"
+        ],
+        "actualPrice": 151,
+        "discount": 19,
+        "description": "Juicy, farm-fresh strawberries packed with natural sweetness and essential vitamins. Perfect for snacking, desserts, or smoothies."
+      },
+      {
+        "id": "sb2",
+        "name": "Strawberry Jam",
+        "price": 106,
+        "unit": "200g",
+        "inStock": true,
+        "rating": 4.2,
+        "Diet Type": "Strawberry",
+        "Flavour": "Strawberry",
+        "Speciality": "Gluten Free, Sugar Free",
+        "Brand": "ESTA BETTERU C",
+        "imageURLs": [
+          "/assets/images/featured/122.jpg",
+          "/assets/images/featured/123.jpg",
+          "/assets/images/featured/124.jpg",
+          "/assets/images/featured/125.jpg",
+          "/assets/images/featured/126.jpg"
+        ],
+        "actualPrice": 124,
+        "discount": 15,
+        "description": "Delicious strawberry jam made from handpicked berries. A perfect spread for breads, pancakes, and desserts."
+      },
+      {
+        "id": "sb3",
+        "name": "Strawberry Yogurt",
+        "price": 61,
+        "unit": "100g",
+        "inStock": true,
+        "rating": 4.3,
+        "Flavour": "Strawberry",
+        "Diet Type": "Strawberry",
+        "Speciality": "Gluten Free, Sugar Free",
+        "Brand": "ESTA BETTERU C",
+        "imageURLs": [
+          "/assets/images/featured/127.jpg",
+          "/assets/images/featured/128.jpg",
+          "/assets/images/featured/129.jpg",
+          "/assets/images/featured/130.jpg",
+          "/assets/images/featured/131.jpg"
+        ],
+        "actualPrice": 67,
+        "discount": 9,
+        "description": "Creamy yogurt infused with the refreshing taste of ripe strawberries. Rich in probiotics and perfect for a healthy snack."
+      },
+      {
+        "id": "sb4",
+        "name": "Strawberry Juice",
+        "price": 68,
+        "unit": "200ml",
+        "Diet Type": "Strawberry",
+        "inStock": false,
+        "rating": 4,
+        "Flavour": "Strawberry",
+        "Speciality": "Gluten Free, Sugar Free",
+        "Brand": "ESTA BETTERU C",
+        "imageURLs": [
+          "/assets/images/featured/127.jpg",
+          "/assets/images/featured/128.jpg",
+          "/assets/images/featured/129.jpg",
+          "/assets/images/featured/130.jpg",
+          "/assets/images/featured/131.jpg"
+        ],
+        "actualPrice": 84,
+        "discount": 19,
+        "description": "Refreshing strawberry juice made from real fruit extract. A naturally sweet and tangy beverage to energize your day."
+      },
+      {
+        "id": "sb5",
+        "name": "Frozen Strawberry",
+        "price": 157,
+        "unit": "500g",
+        "inStock": true,
+        "rating": 4.6,
+        "Flavour": "Strawberry",
+        "Diet Type": "Strawberry",
+        "Brand": "ESTA BETTERU C",
+        "Speciality": "Gluten Free, Sugar Free",
+        "imageURLs": [
+          "/assets/images/featured/132.jpg",
+          "/assets/images/featured/133.jpg",
+          "/assets/images/featured/134.jpg",
+          "/assets/images/featured/135.jpg",
+          "/assets/images/featured/136.jpg"
+        ],
+        "actualPrice": 171,
+        "discount": 8,
+        "description": "Premium-quality frozen strawberries sealed with freshness. Ideal for smoothies, baking, and year-round enjoyment."
+      }
+    ]
+  }
   ]
 }

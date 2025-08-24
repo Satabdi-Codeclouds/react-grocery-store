@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ProductItem from './ProductItem';
+import {Link} from 'react-router-dom';
+
 const fetchProducts = async () => {
     return fetch(
         `/assets/data/all-products.json`,
@@ -88,7 +90,7 @@ function PopularProducts() {
                                             <h4 className="title mb-[5px] font-Manrope text-[40px] text-[#fff] font-light leading-[1.2] max-[1400px]:text-[28px] max-[1200px]:text-[22px] max-[992px]:text-[28px] max-[768px]:text-[26px] max-[576px]:text-[28px]">Juicy </h4>
                                             <h5 className="sub-title mb-[5px] font-Manrope uppercase text-[38px] text-[#f7e8aa] font-black leading-[1.2] max-[1400px]:mb-[2px] max-[1400px]:text-[26px] max-[1200px]:mb-[0] max-[1200px]:text-[20px] max-[992px]:mb-[3px] max-[992px]:text-[24px] max-[768px]:mb-[0] max-[768px]:text-[22px] max-[576px]:mb-[2px] max-[576px]:text-[24px]">Fruits</h5>
                                             <span className="font-Poppins text-[16px] text-[#fff] max-[1400px]:text-[14px]">100% Natural</span>
-                                            <a href="shop-left-sidebar.html" className="cr-button mt-[15px] h-[40px] font-bold transition-all duration-[0.3s] ease-in-out py-[5px] px-[15px] text-[14px] font-Manrope capitalize leading-[1.2] bg-[#64b496] text-[#fff] border-[1px] border-solid border-[#64b496] rounded-[5px] flex items-center justify-center hover:bg-[#000] hover:border-[#000]">Shop Now</a>
+                                            <Link to={"/products?category=apple-mango"} className="cr-button mt-[15px] h-[40px] font-bold transition-all duration-[0.3s] ease-in-out py-[5px] px-[15px] text-[14px] font-Manrope capitalize leading-[1.2] bg-[#64b496] text-[#fff] border-[1px] border-solid border-[#64b496] rounded-[5px] flex items-center justify-center hover:bg-[#000] hover:border-[#000]">Shop Now</Link>
                                         </div>
                                     </div>
                                 </div>

@@ -4,64 +4,7 @@ import {WishListContext} from '../context/WishListContext';
 import ProductItem from '../components/products/ProductItem';
 
 const WishlistSection = () => {
-  const products = [
-    {
-      id: 1,
-      category: "Vegetables",
-      title: "Fresh organic villa farm lomon 500gm pack",
-      image: "assets/images/1.jpg",
-      zoomImg: "assets/images/1.jpg",
-      rating: 4.5,
-      newPrice: "$120.25",
-      oldPrice: "$123.25"
-    },
-    {
-      id: 2,
-      category: "Snacks",
-      title: "Best snakes with hazel nut pack 200gm",
-      image: "assets/images/9.jpg",
-      zoomImg: "assets/images/9.jpg",
-      rating: 5.0,
-      newPrice: "$145",
-      oldPrice: "$150"
-    },
-    {
-      id: 3,
-      category: "Fruits",
-      title: "Fresh organic apple 1kg simla marming",
-      image: "assets/images/2.jpg",
-      zoomImg: "assets/images/2.jpg",
-      rating: 4.5,
-      newPrice: "$120.25",
-      oldPrice: "$123.25"
-    },
-    {
-      id: 4,
-      category: "Fruits",
-      title: "Organic fresh venila farm watermelon 5kg",
-      image: "assets/images/3.jpg",
-      zoomImg: "assets/images/3.jpg",
-      rating: 3.2,
-      newPrice: "$50.30",
-      oldPrice: "$72.60"
-    }
-  ];
-
-  const renderStars = (rating) => {
-    const fullStars = Math.floor(rating);
-    const halfStar = rating % 1 !== 0;
-    return (
-      <>
-        {[...Array(fullStars)].map((_, i) => (
-          <i key={`full-${i}`} className="ri-star-fill mx-[1px] text-[15px] text-[#f5885f]"></i>
-        ))}
-        {halfStar && <i className="ri-star-line mx-[1px] text-[15px] text-[#f5885f]"></i>}
-        {[...Array(5 - fullStars - (halfStar ? 1 : 0))].map((_, i) => (
-          <i key={`empty-${i}`} className="ri-star-line mx-[1px] text-[15px] text-[#f5885f]"></i>
-        ))}
-      </>
-    );
-  };
+ 
 
   const {toggleWishList,isWished,wishListItems} = useContext(WishListContext);
 

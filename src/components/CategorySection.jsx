@@ -1,19 +1,47 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom'
+import useFetch from "../hooks/useFetch";
 
 const CategorySection = () => {
-  const [activeTab, setActiveTab] = useState('cake_milk');
+  const [activeTab, setActiveTab] = useState('cake-milk');
+  const { data: prodList, loading, error } = useFetch(`/assets/data/all-products.json`);
+  const [tabs, setTabs] = useState([])
+  const [paneData, setPaneData] = useState({})
 
-  const tabs = [
-    { id: 'cake_milk', label: 'Cake & Milk', count: 65 },
-    { id: 'meat', label: 'Fresh Meat', count: 30 },
-    { id: 'Vegetables', label: 'Vegetables', count: 25 },
-    { id: 'Custard', label: 'Apple & Mango', count: 45 },
-    { id: 'Strawberry', label: 'Strawberry', count: 68 }
-  ];
+  useEffect(() => {
+    if (!loading && prodList?.categories?.length > 0) {
+      const productsArr = [];
+      const catTabsArr = []
+      const productObj = {}
+      prodList?.categories.forEach((category) => {
+        catTabsArr.push({ id: category.id, label: category.name, count: category.products.length })
+        productObj[category.id] = []
+        productObj[category.id].push({
+          productId: category.products[0]['id'],
+          categoryId:category?.id,
+          title: category.products[0]['name'],
+          discount: category.products[0]['discount'],
+          image: category.images[0]
+        });
+        productObj[category.id].push({
+          productId: category.products[1]['id'],
+          categoryId:category?.id,
+          title: category.products[1]['name'],
+          discount: category.products[1]['discount'],
+          image: category.images[1]
+        });
+        productsArr.push(productObj)
+      })
+      console.log(productObj)
+      setTabs(catTabsArr);
+      setPaneData(productObj)
+    }
+  }, [prodList])
 
-  const renderTabButton = (element,index) => (
+
+  const renderTabButton = (element, index) => (
     <li
-      key={'catBtn-'+element.id}
+      key={'catBtn-' + element.id}
       className="nav-item transition-all duration-[0.3s] ease-in-out w-full max-[992px]:w-[calc(50%-12px)] max-[420px]:w-full flex justify-center bg-[#f7f7f8] border-[1px] border-solid border-[#e9e9e9] rounded-[5px] py-[26px] max-[1599px]:py-[20px] max-[1400px]:py-[18px] hover:text-[#64b496] cursor-pointer mb-[5px]"
       onClick={() => setActiveTab(element.id)}
     >
@@ -25,11 +53,13 @@ const CategorySection = () => {
   );
 
   const renderPane = (id, products) => (
+    
     <div className="tab-categories-pane" id={id} style={{ display: activeTab === id ? 'block' : 'none' }}>
       <div className="flex flex-wrap w-full mb-[-24px]">
+
         {products.map((product, idx) => (
           <div
-            key={'cat-pane-'+idx}
+            key={'cat-pane-' + idx}
             className="w-[50%] max-[420px]:w-full cr-categories-box px-[12px] mb-[24px]"
           >
             <div className="cr-side-categories relative overflow-hidden rounded-[5px] z-[5] max-[992px]:h-[400px] max-[576px]:h-[350px] max-[480px]:h-[300px] max-[420px]:h-[380px]">
@@ -49,12 +79,12 @@ const CategorySection = () => {
                   </h5>
                 </div>
                 <div className="categories-button flex justify-center items-center">
-                  <a
-                    href="shop-left-sidebar.html"
+                  <Link
+                    to={'/product-details/'+product?.productId+'?catId='+product?.categoryId}
                     className="cr-button h-[40px] font-bold transition-all duration-[0.3s] ease-in-out py-[8px] px-[22px] text-[14px] font-Manrope capitalize leading-[1.2] bg-[#64b496] text-[#fff] border-[1px] border-solid border-[#64b496] rounded-[5px] flex items-center justify-center hover:bg-[#000] hover:border-[#000]"
                   >
                     shop now
-                  </a>
+                  </Link>
                 </div>
               </div>
               <img
@@ -65,34 +95,11 @@ const CategorySection = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> 
     </div>
   );
 
-  const paneData = {
-    cake_milk: [
-      { title: 'Cake', discount: 50, image: 'assets/images/categories/3.jpg' },
-      { title: 'Milk', discount: 40, image: 'assets/images/categories/4.jpg' }
-    ],
-    meat: [
-      { title: 'Fish Meat', discount: 35, image: 'assets/images/categories/1.jpg' },
-      { title: 'Fresh Meat', discount: 24, image: 'assets/images/categories/2.jpg' }
-    ],
-    Vegetables: [
-      { title: 'Coriander', discount: 45, image: 'assets/images/categories/5.jpg' },
-      { title: 'Broccoli', discount: 20, image: 'assets/images/categories/6.jpg' }
-    ],
-    Custard: [
-      { title: 'Apple', discount: 30, image: 'assets/images/categories/7.jpg' },
-      { title: 'Mango', discount: 25, image: 'assets/images/categories/8.jpg' }
-    ],
-    Strawberry: [
-      { title: 'Strawberry', discount: 33, image: 'assets/images/categories/9.jpg' },
-      { title: 'Strawberry', discount: 15, image: 'assets/images/categories/10.jpg' }
-    ]
-  };
 
-  
 
   return (
     <section className="section-categories pb-[100px] max-[1200px]:pb-[70px] relative">
@@ -101,18 +108,16 @@ const CategorySection = () => {
           <div className="min-[992px]:w-[33.33%] w-full px-[12px] mb-[24px]">
             <div className="cr-categories">
               <ul className="nav nav-tabs max-[992px]:mb-[-5px] flex flex-wrap justify-between mb-[-5px]" id="myCategoriesTab">
-                
+
                 {tabs.map(renderTabButton)}
-                <li className="nav-item flex justify-center bg-[#f7f7f8] w-full max-[992px]:w-[calc(50%-12px)] max-[420px]:w-full max-[992px]:flex max-[992px]:items-center border-[1px] border-solid border-[#e9e9e9] rounded-[5px] py-[25px] max-[1599px]:py-[20px] max-[1400px]:py-[18px] pointer-events-none mb-[5px]">
-                  <a className="center-categories-inner w-full flex justify-center font-Manrope text-[16px] max-[1200px]:text-[15px] max-[992px]:leading-[15px] text-[#64b496] font-bold leading-[1.429] text-center" href="shop-left-sidebar.html">View More</a>
-                </li>
+
               </ul>
             </div>
           </div>
           <div className="min-[992px]:w-[66.66%] w-full mb-[24px]">
             <div className="tab-content" id="myTabContent">
-                {/* ["cake_milk", "meat", "Vegetables", "Custard", "Strawberry"] */}
-              {Object.keys(paneData).map((element,index) => renderPane(element, paneData[element]))}
+              {/* ["cake_milk", "meat", "Vegetables", "Custard", "Strawberry"] */}
+              {Object.keys(paneData).map((element, index) => renderPane(element, paneData[element]))}
             </div>
           </div>
         </div>

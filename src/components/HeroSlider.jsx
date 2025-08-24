@@ -7,19 +7,24 @@ import 'swiper/css/pagination';
 
 // import banner1 from '/assets/images/banner.jpg';
 // import banner2 from '/assets/images/banner-2.jpg';
+import {Link} from 'react-router-dom';
 
 const slides = [
   {
     id: 1,
     bg: '/assets/images/banner.jpg',
-    title: 'Explore fresh & juicy fruits.',
-    subtitle: '100% Organic Fruits',
+    title: 'The best way to stuff your wallet.',
+    subtitle: '100% Organic Vegetables',
+    desc:'Fresh from the farm. No chemicals, no compromise. Nurtured by Nature – Picked for You. Freshness You Can Taste, Health You Can Trust.',
+    category:'vegetables'
   },
   {
     id: 2,
     bg: '/assets/images/banner-2.jpg',
-    title: 'The best way to stuff your wallet.',
-    subtitle: '100% Organic Vegetables',
+    title: 'Explore fresh & juicy fruits.',
+    subtitle: '100% Organic Fruits',
+    desc:'Naturally Sweet. Always Fresh. Juicy. Pure. Grown Without Chemicals. Farm-Fresh Flavors, Zero Pesticides.',
+    category:'apple-mango'
   },
 ];
 
@@ -33,6 +38,7 @@ const HeroSlider = () => {
         autoplay={{ delay: 3000 }}
         loop
         className="cr-slider"
+        speed={1000}
       >
         {sliders.map((slide) => (
           <SwiperSlide key={slide.id}>
@@ -53,16 +59,15 @@ const HeroSlider = () => {
                       {slide.title}
                     </h1>
                     <p className="mb-0 text-[15px] font-Poppins text-[#7a7a7a] leading-[1.75] max-[768px]:text-[14px] max-[480px]:hidden">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet reiciendis beatae
-                      consequuntur.
+                      {slide.desc}
                     </p>
                     <div className="cr-last-buttons mt-[30px] flex max-[992px]:mt-[18px]">
-                      <a
-                        href="/shop-left-sidebar"
+                      <Link
+                       to={'/products?category='+slide.category}
                         className="cr-button mr-[20px] h-[40px] font-bold transition-all duration-[0.3s] ease-in-out py-[8px] px-[22px] text-[14px] font-Manrope capitalize leading-[1.2] bg-[#64b496] text-[#fff] border-[1px] border-solid border-[#64b496] rounded-[5px] flex items-center justify-center hover:bg-[#000] hover:border-[#000]"
                       >
                         shop now
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

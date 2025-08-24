@@ -60,10 +60,11 @@ const ProductList = () => {
             //         products: filteredProducts
             //     }
             // })
+             setFilteredData(filteredData)
         }
        // const currentItems = filteredData.slice(offset, offset + itemsPerPage)
 
-        setFilteredData(filteredData)
+       
     }
 
     const handlePageClick = (event) => {
@@ -93,7 +94,9 @@ const ProductList = () => {
                     </div>
                     <div className="product-content flex flex-wrap w-full mb-[-24px]" id="MixItUpDA2FB7">
                         <div className="min-[1200px]:w-[25%] min-[992px]:w-[33.33%] w-full mb-[24px]">
+                            {loading ? '' :
                             <ProductFilterSidebar filterHandler={filterProducts} productList={prodList} />
+                             }
                             <div className="flex flex-wrap w-full mb-[-24px] sticky top-[0]">
                                 <div className="min-[992px]:w-full w-[50%] max-[480px]:w-full px-[12px] mb-[24px]">
 

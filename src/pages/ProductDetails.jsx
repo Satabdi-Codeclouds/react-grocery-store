@@ -7,6 +7,7 @@ import { CartContext } from "../context/CartContext";
 import useFetch from "../hooks/useFetch";
 import { WishListContext } from '../context/WishListContext'
 import QuickViewProduct from './../components/products/QuickViewProduct';
+import Rating from "../components/products/Rating";
 
 function ProductDetails() {
     const [searchParams] = useSearchParams();
@@ -28,7 +29,7 @@ function ProductDetails() {
                 setProductItem(selectedProduct)
             }
         }
-    }, [prodList])
+    }, [prodList,prodId])
 
     const handleQuantiy = (quantity, increase) => {
         if (increase)
@@ -56,36 +57,37 @@ function ProductDetails() {
                                 </div>
                                 <div className="min-[768px]:w-[50%] w-full px-[12px] mb-[24px]">
                                     <div className="cr-size-and-weight-contain border-b-[1px] border-solid border-[#e9e9e9] pb-[20px] max-[768px]:mt-[24px]">
-                                        <h2 className="heading mb-[15px] block text-[#2b2b2d] text-[22px] leading-[1.5] font-medium max-[1400px]:text-[26px] max-[992px]:text-[20px]">Seeds Of Change Oraganic Quinoa, Brown</h2>
-                                        <p className="mb-[0] text-[14px] font-Poppins text-[#7a7a7a] leading-[1.75]">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, iure minus error doloribus saepe natus?</p>
+                                        <h2 className="heading mb-[15px] block text-[#2b2b2d] text-[22px] leading-[1.5] font-medium max-[1400px]:text-[26px] max-[992px]:text-[20px]">{pructItem?.name}</h2>
+                                        <p className="mb-[0] text-[14px] font-Poppins text-[#7a7a7a] leading-[1.75]">{pructItem?.description}</p>
                                     </div>
                                     <div className="cr-size-and-weight pt-[20px]">
                                         <div className="cr-review-star flex">
                                             <div className="cr-star mr-[10px]">
+                                                {/* <i className="ri-star-fill text-[16px] text-[#f5885f]"></i>
                                                 <i className="ri-star-fill text-[16px] text-[#f5885f]"></i>
                                                 <i className="ri-star-fill text-[16px] text-[#f5885f]"></i>
                                                 <i className="ri-star-fill text-[16px] text-[#f5885f]"></i>
-                                                <i className="ri-star-fill text-[16px] text-[#f5885f]"></i>
-                                                <i className="ri-star-fill text-[16px] text-[#f5885f]"></i>
+                                                <i className="ri-star-fill text-[16px] text-[#f5885f]"></i> */}
+                                                <Rating ratingScore={pructItem?.rating} />
                                             </div>
                                             <p className="mb-[0] text-[15px] font-Poppins text-[#7a7a7a] leading-[1.75] max-[380px]:hidden">( 75 Review )</p>
                                         </div>
                                         <div className="list">
                                             <ul className="mt-[15px] p-[0] mb-[1rem]">
-                                                <li className="py-[5px] text-[#777] flex"><label className="min-w-[100px] mr-[10px] text-[#2b2b2d] font-semibold flex justify-between">Brand <span>:</span></label>ESTA BETTERU CO</li>
-                                                <li className="py-[5px] text-[#777] flex"><label className="min-w-[100px] mr-[10px] text-[#2b2b2d] font-semibold flex justify-between">Flavour <span>:</span></label>Super Saver Pack</li>
-                                                <li className="py-[5px] text-[#777] flex"><label className="min-w-[100px] mr-[10px] text-[#2b2b2d] font-semibold flex justify-between">Diet Type <span>:</span></label>Vegetarian</li>
-                                                <li className="py-[5px] text-[#777] flex"><label className="min-w-[100px] mr-[10px] text-[#2b2b2d] font-semibold flex justify-between">Weight <span>:</span></label>200 Grams</li>
-                                                <li className="py-[5px] text-[#777] flex"><label className="min-w-[100px] mr-[10px] text-[#2b2b2d] font-semibold flex justify-between">Speciality <span>:</span></label>Gluten Free, Sugar Free</li>
-                                                <li className="py-[5px] text-[#777] flex"><label className="min-w-[100px] mr-[10px] text-[#2b2b2d] font-semibold flex justify-between">Info <span>:</span></label>Egg Free, Allergen-Free</li>
+                                                <li className="py-[5px] text-[#777] flex"><label className="min-w-[100px] mr-[10px] text-[#2b2b2d] font-semibold flex justify-between">Brand <span>:</span></label>{pructItem?.Brand}</li>
+                                                <li className="py-[5px] text-[#777] flex"><label className="min-w-[100px] mr-[10px] text-[#2b2b2d] font-semibold flex justify-between">Flavour <span>:</span></label>{pructItem?.Flavour}</li>
+                                                <li className="py-[5px] text-[#777] flex"><label className="min-w-[100px] mr-[10px] text-[#2b2b2d] font-semibold flex justify-between">Diet Type <span>:</span></label>{pructItem?.Brand}</li>
+                                                <li className="py-[5px] text-[#777] flex"><label className="min-w-[100px] mr-[10px] text-[#2b2b2d] font-semibold flex justify-between">Weight <span>:</span></label>{pructItem?.unit}</li>
+                                                <li className="py-[5px] text-[#777] flex"><label className="min-w-[100px] mr-[10px] text-[#2b2b2d] font-semibold flex justify-between">Speciality <span>:</span></label>{pructItem?.Speciality}</li>
+                                                {/* <li className="py-[5px] text-[#777] flex"><label className="min-w-[100px] mr-[10px] text-[#2b2b2d] font-semibold flex justify-between">Info <span>:</span></label>Egg Free, Allergen-Free</li> */}
                                                 <li className="py-[5px] text-[#777] flex"><label className="min-w-[100px] mr-[10px] text-[#2b2b2d] font-semibold flex justify-between">Items <span>:</span></label>1</li>
                                             </ul>
                                         </div>
                                         <div className="cr-product-price pt-[20px]">
-                                            <span className="new-price font-Poppins text-[24px] font-semibold leading-[1.167] text-[#64b496] max-[768px]:text-[22px] max-[576px]:text-[20px]">$120.25</span>
-                                            <span className="old-price font-Poppins text-[16px] line-through leading-[1.75] text-[#7a7a7a]">$123.25</span>
+                                            <span className="new-price font-Poppins text-[24px] font-semibold leading-[1.167] text-[#64b496] max-[768px]:text-[22px] max-[576px]:text-[20px]">${pructItem?.price}</span>
+                                            <span className="old-price font-Poppins text-[16px] line-through leading-[1.75] text-[#7a7a7a]">${pructItem?.actualPrice}</span>
                                         </div>
-                                        <div className="cr-size-weight flex items-center pt-[20px] max-[380px]:flex-col max-[380px]:justify-start max-[380px]:items-start">
+                                        {/* <div className="cr-size-weight flex items-center pt-[20px] max-[380px]:flex-col max-[380px]:justify-start max-[380px]:items-start">
                                             <h5 className="mb-[0] font-Poppins text-[16px] leading-[1.556] text-[#2b2b2d] font-medium max-[1200px]:min-w-[100px] max-[1200px]:text-[14px]"><span>Size</span>/<span>Weight</span> :</h5>
                                             <div className="cr-kg pl-[10px] max-[380px]:pl-[0] max-[380px]:pt-[10px]">
                                                 <ul className="w-full p-[0] m-[0] flex flex-wrap">
@@ -95,7 +97,7 @@ function ProductDetails() {
                                                     <li className="transition-all duration-[0.3s] ease-in-out m-[2px] py-[5px] px-[10px] font-Poppins text-[12px] leading-[1] bg-[#fff] text-[#777] border-[1px] border-solid border-[#e9e9e9] rounded-[5px] cursor-pointer max-[1200px]:mr-[5px]">200kg</li>
                                                 </ul>
                                             </div>
-                                        </div>
+                                        </div> */}
                                         <div className="cr-add-card flex pt-[20px]">
                                             <div className="cr-qty-main h-full flex relative">
                                                 <input readOnly type="text" placeholder="." value={quantity} minlength="1" maxlength="20" className="quantity h-[40px] w-[40px] mr-[5px] text-center border-[1px] border-solid border-[#e9e9e9] rounded-[5px]" />
@@ -254,11 +256,12 @@ function ProductDetails() {
                     <RelatedProducts categoryId={catId} />
                 </div>
             </section>
+            {pructItem ?
             <QuickViewProduct
                 isOpen={isOpenQuickView}
                 onClose={() => setIsOpenQuickView(false)}
                 product={pructItem}
-            />
+            /> : ''}
         </>
     )
 }

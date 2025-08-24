@@ -2949,3 +2949,6 @@ ul#myCategoriesTab li.active a {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
 }
+.wished-icon {
+  color: #64b496 !important;
+}

@@ -42,14 +42,16 @@ const CategorySection = () => {
   const renderTabButton = (element, index) => (
     <li
       key={'catBtn-' + element.id}
-      className="nav-item transition-all duration-[0.3s] ease-in-out w-full max-[992px]:w-[calc(50%-12px)] max-[420px]:w-full flex justify-center bg-[#f7f7f8] border-[1px] border-solid border-[#e9e9e9] rounded-[5px] py-[26px] max-[1599px]:py-[20px] max-[1400px]:py-[18px] hover:text-[#64b496] cursor-pointer mb-[5px]"
+      className="nav-item transition-all duration-[0.3s] ease-in-out w-full max-[992px]:w-[calc(50%-12px)] max-[420px]:w-full flex justify-center bg-[#f7f7f8] border-[1px] border-solid border-[#e9e9e9] rounded-[5px] py-[26px] max-[1599px]:py-[20px] max-[1400px]:py-[25px] hover:text-[#64b496] cursor-pointer mb-[5px]"
       onClick={() => setActiveTab(element.id)}
     >
       <div className="w-full flex flex-col items-center font-Poppins font-medium text-[15px]">
         {element.label}
         <span className="text-[11px] font-normal text-[#7a7a7a] mt-[5px] align-top">({element.count} items)</span>
       </div>
+
     </li>
+    
   );
 
   const renderPane = (id, products) => (
@@ -102,7 +104,7 @@ const CategorySection = () => {
 
 
   return (
-    <section className="section-categories pb-[100px] max-[1200px]:pb-[70px] relative">
+    <section className="section-categories  max-[1200px] relative">
       <div className="flex flex-wrap justify-between relative items-center mx-auto min-[1600px]:max-w-[1500px] min-[1400px]:max-w-[1320px] min-[1200px]:max-w-[1140px] min-[992px]:max-w-[960px] min-[768px]:max-w-[720px] min-[576px]:max-w-[540px]">
         <div className="flex flex-wrap w-full mb-[-24px]">
           <div className="min-[992px]:w-[33.33%] w-full px-[12px] mb-[24px]">

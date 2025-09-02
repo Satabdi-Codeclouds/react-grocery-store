@@ -9,22 +9,18 @@ const services = [
   {
     icon: "ri-customer-service-2-line",
     title: "24X7 Support",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing.",
+    desc: "Our support team is available 24 hours a day, 7 days a week — chat, email, or call us anytime.",
   },
   {
     icon: "ri-truck-line",
     title: "Delivery in 5 Days",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing.",
+    desc: "Delivery in 5 Days means that the product will reach the customer within 5 days after the order has been placed....",
   },
-  {
-    icon: "ri-money-dollar-box-line",
-    title: "Payment Secure",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing.",
-  },
+  
   {
     icon: "ri-red-packet-line",
     title: "Product Packing",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing.",
+    desc: "Product packing refers to the process of placing a product into a container or packaging....",
   },
 ];
 

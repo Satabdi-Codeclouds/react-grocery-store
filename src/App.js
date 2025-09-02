@@ -20,6 +20,9 @@ import { LoginContextProvider } from './context/LoginContext';
 import PrivateRoute from './Auth/PrivateRoute';
 import TrackSection from './pages/TrackSection';
 import NotFound from './pages/NotFound';
+import AboutSection from './pages/AboutSection';
+// import ContactSection from './pages/ContactSection';
+
 
 
 function App() {
@@ -35,10 +38,11 @@ function App() {
               <Route path="product-details/:prodId" element={<ProductDetails />} />
               <Route path="my-cart" element={<CartSection />}></Route>
               <Route path="wishlist" element={<WishlistSection />}></Route>
-              
-                <Route path="checkout" element={<CheckoutSection /> }></Route>
-                  <Route path="track-order" element={<PrivateRoute><TrackSection /> </PrivateRoute>}></Route>
-             <Route path="*" element={<NotFound />} />
+               {/* <Route path="contact" element={<ContactSection/>}></Route> */}
+              <Route path="about-us" element={<AboutSection />}></Route>
+              <Route path="checkout" element={<CheckoutSection />}></Route>
+              <Route path="track-order" element={<PrivateRoute><TrackSection /> </PrivateRoute>}></Route>
+              <Route path="*" element={<NotFound />} />
             </Route>
 
           </Routes>

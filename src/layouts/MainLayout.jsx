@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "../components/Header";
 import Home from '../pages/Home';
-import AboutSection from '../components/AboutSection';
+
 import HeroSlider from '../components/HeroSlider';
 import CategorySection from '../components/CategorySection';
 // import ProductBanner from '../components/ProductBanner';

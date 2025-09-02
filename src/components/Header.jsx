@@ -52,10 +52,7 @@ const menuItems = [
                 item: "Wishlist",
                 link: "wishlist",
             },
-            {
-                item: "Faq",
-                link: "faq",
-            },
+            
             {
                 item: "Login",
                 link: "login",
@@ -80,7 +77,7 @@ function Header() {
                                 <Link to={'/'}
                                     className="cr-logo max-[576px]:mb-[15px] max-[576px]:flex max-[576px]:justify-center">
                                     <img src="/assets/images/logo.png" alt="logo"
-                                        className="logo block h-[35px] w-[115px] max-[576px]:w-[100px]" />
+                                        className="logo block h-[45px] w-[148px] max-[576px]:w-[100px]" />
                                     <img src="/assets/images/dark-logo.png" alt="logo"
                                         className="dark-logo hidden h-[35px] w-[115px] max-[576px]:w-[100px]" />
                                 </Link>
@@ -122,7 +119,7 @@ function Header() {
                                     <Link to={'my-cart'}
                                         className="cr-right-bar-item Shopping-toggle transition-all duration-[0.3s] ease-in-out flex items-center">
                                         <i className="ri-shopping-cart-line pr-[5px] text-[21px] leading-[17px] relative">
-                                            <span className="absolute text-[red] text-[27px] font-extrabold -top-[19px] left-[8px] z-10">{cartItems.length}</span>
+                                            <span className="font-family: 'Poppins', sans-serif; absolute bg-[red] text-[#fff] text-[15px] font-extrabold -top-[20px] left-[8px] z-10 rounded-[20px] p-[5px] w-[20px] h-[20px] leading-[10px] text-center">{cartItems.length}</span>
                                         </i>
                                         <span
                                             className="transition-all duration-[0.3s] ease-in-out font-Poppins text-[15px] leading-[15px] font-medium text-[#000]">Cart</span>
@@ -136,7 +133,7 @@ function Header() {
                     <div
                         className="flex flex-wrap justify-between relative items-center mx-auto min-[1600px]:max-w-[1500px] min-[1400px]:max-w-[1320px] min-[1200px]:max-w-[1140px] min-[992px]:max-w-[960px] min-[768px]:max-w-[720px] min-[576px]:max-w-[540px]">
                         <div className="cr-menu-list w-full px-[12px] relative flex items-center flex-row justify-between">
-                            <div className="cr-category-icon-block py-[10px] max-[992px]:hidden">
+                            {/* <div className="cr-category-icon-block py-[10px] max-[992px]:hidden">
                                 <div className="cr-category-menu relative">
                                     <div
                                         className="cr-category-toggle w-[35px] h-[35px] border-[1px] border-solid border-[#e9e9e9] rounded-[5px] cursor-pointer flex items-center justify-center">
@@ -144,7 +141,7 @@ function Header() {
                                     </div>
                                 </div>
 
-                            </div>
+                            </div> */}
                             <nav
                                 className="justify-between relative flex flex-wrap items-center max-[992px]:w-full max-[992px]:py-[10px]">
                                 <a href="javascript:void(0)"
@@ -185,7 +182,7 @@ function Header() {
                                 <div className="min-[992px]:flex min-[992px]:basis-auto grow-[1] items-center hidden"
                                     id="navbarSupportedContent">
                                     <ul
-                                        className="navbar-nav flex min-[992px]:flex-row items-center m-auto relative z-[3] min-[992px]:flex-row max-[1200px]:mr-[-5px] max-[992px]:m-[0]">
+                                        className="mt-[9px] navbar-nav flex min-[992px]:flex-row items-center m-auto relative z-[3] min-[992px]:flex-row max-[1200px]:mr-[-5px] max-[992px]:m-[0]">
 
                                         {
                                             items.map((element, index) => {
@@ -207,8 +204,8 @@ function Header() {
 
 
                                                                     return <li className="w-full mr-[0]">
-                                                                        <a className="dropdown-item transition-all duration-[0.3s] ease-in-out font-Poppins py-[7px] px-[20px] bg-[#fff] relative capitalize text-[13px] text-[#777] hover:text-[#64b496] whitespace-nowrap tracking-[0.03rem] block w-full"
-                                                                            href="shop-left-sidebar.html">{childElement.item}</a>
+                                                                        <Link className="dropdown-item transition-all duration-[0.3s] ease-in-out font-Poppins py-[7px] px-[20px] bg-[#fff] relative capitalize text-[13px] text-[#777] hover:text-[#64b496] whitespace-nowrap tracking-[0.03rem] block w-full"
+                                                                            to={"about-us"}>{childElement.item}</Link>
                                                                     </li>
                                                                 })}
                                                             </ul>

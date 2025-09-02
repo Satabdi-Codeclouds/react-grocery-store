@@ -14,8 +14,7 @@ function BlogSection() {
                   <h2 className="font-Manrope text-[32px] font-bold leading-[1.2] text-[#2b2b2d] max-[1200px]:text-[28px] max-[992px]:text-[25px] max-[768px]:text-[22px]">Latest News</h2>
                 </div>
                 <div className="cr-banner-sub-title w-full">
-                  <p className="max-w-[600px] m-auto font-Poppins text-[14px] text-[#7a7a7a] leading-[22px] text-center max-[1200px]:w-[80%] max-[992px]:w-full">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                    ut labore lacus vel facilisis. </p>
+                  <p className="max-w-[600px] m-auto font-Poppins text-[14px] text-[#7a7a7a] leading-[22px] text-center max-[1200px]:w-[80%] max-[992px]:w-full">Discover practical ways to reduce your expenses while still buying everything you need — from bulk buying to deal-hunting. </p>
                 </div>
               </div>
             </div>
@@ -33,7 +32,8 @@ function BlogSection() {
                     <div className="cr-blog bg-[#fff] rounded-[5px] border-[1px] border-solid border-[#e9e9e9] overflow-hidden">
                       <div className="cr-blog-content p-[24px] text-left">
                         <span className="font-Poppins text-[14px] font-normal leading-[2] text-[#7a7a7a]"><code className="font-Poppins text-[14px] font-normal text-[#777]">By Admin</code> | <a href="blog-left-sidebar.html" className="transition-all duration-[0.3s] ease-in-out relative font-Manrope text-[14px] font-light leading-[1.875] text-[#777]">Food</a></span>
-                        <h5 className="mt-[5px] font-Poppins text-[17px] font-semibold leading-[24px] text-[#2b2b2d] mb-[0.5rem] max-[1200px]:text-[16px] max-[992px]:text-[15px] max-[768px]:text-[14px] max-[576px]:text-[18px]">Best guide to Shopping for organic ingredients.</h5>
+                        <h5 className="mt-[5px] font-Poppins text-[17px] font-semibold leading-[24px] text-[#2b2b2d] mb-[0.5rem] max-[1200px]:text-[16px] max-[992px]:text-[15px] max-[768px]:text-[14px] max-[576px]:text-[18px]">Urna pretium elit mauris cursus 
+at elit Vestibulum.</h5>
                         <a className="read relative transition-all duration-[0.3s] ease-in-out font-Manrope text-[14px] font-bold leading-[1.875] text-[#64b496]" href="blog-detail-left-sidebar.html">Read More</a>
                       </div>
                       <div className="cr-blog-image relative overflow-hidden">
@@ -52,7 +52,7 @@ function BlogSection() {
                     <div className="cr-blog bg-[#fff] rounded-[5px] border-[1px] border-solid border-[#e9e9e9] overflow-hidden">
                       <div className="cr-blog-content p-[24px] text-left">
                         <span className="font-Poppins text-[14px] font-normal leading-[2] text-[#7a7a7a]"><code className="font-Poppins text-[14px] font-normal text-[#777]">By Admin</code> | <a href="blog-left-sidebar.html" className="transition-all duration-[0.3s] ease-in-out relative font-Manrope text-[14px] font-light leading-[1.875] text-[#777]">Snacks</a></span>
-                        <h5 className="mt-[5px] font-Poppins text-[17px] font-semibold leading-[24px] text-[#2b2b2d] mb-[0.5rem] max-[1200px]:text-[16px] max-[992px]:text-[15px] max-[768px]:text-[14px] max-[576px]:text-[18px]">Cursus at elit vestibulum urna pretium elit mauris.</h5>
+                        <h5 className="mt-[5px] font-Poppins text-[17px] font-semibold leading-[24px] text-[#2b2b2d] mb-[0.5rem] max-[1200px]:text-[16px] max-[992px]:text-[15px] max-[768px]:text-[14px] max-[576px]:text-[18px]">Best guide to Shopping for organic ingredients.</h5>
                         <a className="read relative transition-all duration-[0.3s] ease-in-out font-Manrope text-[14px] font-bold leading-[1.875] text-[#64b496]" href="blog-detail-left-sidebar.html">Read More</a>
                       </div>
                       <div className="cr-blog-image relative overflow-hidden">
@@ -72,7 +72,7 @@ function BlogSection() {
                     <div className="cr-blog bg-[#fff] rounded-[5px] border-[1px] border-solid border-[#e9e9e9] overflow-hidden">
                       <div className="cr-blog-content p-[24px] text-left">
                         <span className="font-Poppins text-[14px] font-normal leading-[2] text-[#7a7a7a]"><code className="font-Poppins text-[14px] font-normal text-[#777]">By Admin</code> | <a href="blog-left-sidebar.html" className="transition-all duration-[0.3s] ease-in-out relative font-Manrope text-[14px] font-light leading-[1.875] text-[#777]">Vegetable</a></span>
-                        <h5 className="mt-[5px] font-Poppins text-[17px] font-semibold leading-[24px] text-[#2b2b2d] mb-[0.5rem] max-[1200px]:text-[16px] max-[992px]:text-[15px] max-[768px]:text-[14px] max-[576px]:text-[18px]">Condimentum Nam enim bestMorbi odio sodales.</h5>
+                        <h5 className="mt-[5px] font-Poppins text-[17px] font-semibold leading-[24px] text-[#2b2b2d] mb-[0.5rem] max-[1200px]:text-[16px] max-[992px]:text-[15px] max-[768px]:text-[14px] max-[576px]:text-[18px]">Cursus at elit vestibulum urna pretium elit mauris.</h5>
                         <a className="read relative transition-all duration-[0.3s] ease-in-out font-Manrope text-[14px] font-bold leading-[1.875] text-[#64b496]" href="blog-detail-left-sidebar.html">Read More</a>
                       </div>
                       <div className="cr-blog-image relative overflow-hidden">
@@ -155,7 +155,7 @@ function BlogSection() {
                     <div className="cr-blog bg-[#fff] rounded-[5px] border-[1px] border-solid border-[#e9e9e9] overflow-hidden">
                       <div className="cr-blog-content p-[24px] text-left">
                         <span className="font-Poppins text-[14px] font-normal leading-[2] text-[#7a7a7a]"><code className="font-Poppins text-[14px] font-normal text-[#777]">By Admin</code> | <a href="blog-left-sidebar.html" className="transition-all duration-[0.3s] ease-in-out relative font-Manrope text-[14px] font-light leading-[1.875] text-[#777]">Vegetable</a></span>
-                        <h5 className="mt-[5px] font-Poppins text-[17px] font-semibold leading-[24px] text-[#2b2b2d] mb-[0.5rem] max-[1200px]:text-[16px] max-[992px]:text-[15px] max-[768px]:text-[14px] max-[576px]:text-[18px]">Condimentum Nam enim bestMorbi odio sodales.</h5>
+                        <h5 className="mt-[5px] font-Poppins text-[17px] font-semibold leading-[24px] text-[#2b2b2d] mb-[0.5rem] max-[1200px]:text-[16px] max-[992px]:text-[15px] max-[768px]:text-[14px] max-[576px]:text-[18px]">Best guide to Shopping for organic ingredients.</h5>
                         <a className="read relative transition-all duration-[0.3s] ease-in-out font-Manrope text-[14px] font-bold leading-[1.875] text-[#64b496]" href="blog-detail-left-sidebar.html">Read More</a>
                       </div>
                       <div className="cr-blog-image relative overflow-hidden">
@@ -176,11 +176,11 @@ function BlogSection() {
                     <div className="cr-blog bg-[#fff] rounded-[5px] border-[1px] border-solid border-[#e9e9e9] overflow-hidden">
                       <div className="cr-blog-content p-[24px] text-left">
                         <span className="font-Poppins text-[14px] font-normal leading-[2] text-[#7a7a7a]"><code className="font-Poppins text-[14px] font-normal text-[#777]">By Admin</code> | <a href="blog-left-sidebar.html" className="transition-all duration-[0.3s] ease-in-out relative font-Manrope text-[14px] font-light leading-[1.875] text-[#777]">Snacks</a></span>
-                        <h5 className="mt-[5px] font-Poppins text-[17px] font-semibold leading-[24px] text-[#2b2b2d] mb-[0.5rem] max-[1200px]:text-[16px] max-[992px]:text-[15px] max-[768px]:text-[14px] max-[576px]:text-[18px]">Urna pretium elit mauris cursus at elit Vestibulum.</h5>
+                        <h5 className="mt-[5px] font-Poppins text-[17px] font-semibold leading-[24px] text-[#2b2b2d] mb-[0.5rem] max-[1200px]:text-[16px] max-[992px]:text-[15px] max-[768px]:text-[14px] max-[576px]:text-[18px]">Cursus at elit vestibulum urna pretium elit mauris.</h5>
                         <a className="read relative transition-all duration-[0.3s] ease-in-out font-Manrope text-[14px] font-bold leading-[1.875] text-[#64b496]" href="blog-detail-left-sidebar.html">Read More</a>
                       </div>
                       <div className="cr-blog-image relative overflow-hidden">
-                        <img src="assets/images/Blog/2.jpg" alt="blog-2" className="transition-all duration-[0.3s] ease-in-out w-full" />
+                        <img src="assets/images/Blog/3.jpg" alt="blog-2" className="transition-all duration-[0.3s] ease-in-out w-full" />
                         <div className="cr-blog-date p-[15px] absolute bottom-[12px] right-[12px] bg-[#000000b3] rounded-[5px] z-[2] max-[992px]:bottom-[15px] max-[992px]:right-[15px]">
                           <span className="font-Manrope text-[23px] font-bold leading-[1.1] text-[#fff] grid text-center max-[992px]:text-[17px]">
                             10
@@ -219,7 +219,7 @@ function BlogSection() {
                         <a className="read relative transition-all duration-[0.3s] ease-in-out font-Manrope text-[14px] font-bold leading-[1.875] text-[#64b496]" href="blog-detail-left-sidebar.html">Read More</a>
                       </div>
                       <div className="cr-blog-image relative overflow-hidden">
-                        <img src="assets/images/Blog/3.jpg" alt="blog-2" className="transition-all duration-[0.3s] ease-in-out w-full" />
+                        <img src="assets/images/Blog/2.jpg" alt="blog-2" className="transition-all duration-[0.3s] ease-in-out w-full" />
                         <div className="cr-blog-date p-[15px] absolute bottom-[12px] right-[12px] bg-[#000000b3] rounded-[5px] z-[2] max-[992px]:bottom-[15px] max-[992px]:right-[15px]">
                           <span className="font-Manrope text-[23px] font-bold leading-[1.1] text-[#fff] grid text-center max-[992px]:text-[17px]">
                             12

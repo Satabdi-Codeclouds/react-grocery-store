@@ -20,7 +20,7 @@ const WishlistSection = () => {
               </div>
               <div className="cr-banner-sub-title w-full">
                 <p className="max-w-[600px] mx-auto text-[14px] text-[#7a7a7a] leading-[22px] text-center font-Poppins">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore lacus vel facilisis.
+                 Explore a wide range of fresh groceries, daily essentials, and pantry must-haves — everything you need in one place.
                 </p>
               </div>
             </div>

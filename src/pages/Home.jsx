@@ -7,6 +7,8 @@ import ServiceSlider from './../components/ServiceSlider'
 import DealSection from './../components/DealSection'
 import BlogSection from './../components/BlogSection'
 import FooterSection from './../components/FooterSection'
+import TestimonialSection from './../components/Testimonailssection'
+
 
 function Home() {
 
@@ -19,7 +21,9 @@ function Home() {
             <ProductBanner />
             <ServiceSlider />
             <DealSection />
+            <TestimonialSection/>
             <BlogSection />
+            
             
 
         </>

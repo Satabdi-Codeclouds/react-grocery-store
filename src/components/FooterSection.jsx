@@ -9,8 +9,8 @@ const FooterSection = () => {
           <div className="min-[1200px]:w-[33.33%] min-[992px]:w-[50%] min-[576px]:w-full w-full px-[12px] cr-footer-border">
             <div className="cr-footer-logo max-w-[400px] mb-[15px] pb-[0]">
               <div className="image pb-[15px]">
-                <img src="assets/images/logo.png" alt="logo" className="logo w-[100px] block" />
-                <img src="assets/images/dark-logo.png" alt="logo" className="dark-logo w-[100px] hidden" />
+                <img src="assets/images/logo.png" alt="logo" className="logo w-[158px] block" />
+                <img src="assets/images/dark-logo.png" alt="logo" className="dark-logo w-[158px] hidden" />
               </div>
               <p className="font-Poppins text-[14px] text-[#7a7a7a] mb-0 leading-[1.75]">
                 Carrot is the biggest market of grocery products. Get your daily needs from our store.

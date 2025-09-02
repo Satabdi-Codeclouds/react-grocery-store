@@ -69,8 +69,7 @@ function PopularProducts() {
                                     <h2 className="font-Manrope text-[32px] font-bold leading-[1.2] text-[#2b2b2d] max-[1200px]:text-[28px] max-[992px]:text-[25px] max-[768px]:text-[22px]">Popular Products</h2>
                                 </div>
                                 <div className="cr-banner-sub-title w-full">
-                                    <p className="max-w-[600px] m-auto font-Poppins text-[14px] text-[#7a7a7a] leading-[22px] text-center max-[1200px]:w-[80%] max-[992px]:w-full">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                        ut labore lacus vel facilisis. </p>
+                                    <p className="max-w-[600px] m-auto font-Poppins text-[14px] text-[#7a7a7a] leading-[22px] text-center max-[1200px]:w-[80%] max-[992px]:w-full">Explore a wide range of fresh groceries, daily essentials, and pantry must-haves — everything you need in one place.</p>
                                 </div>
                             </div>
                         </div>

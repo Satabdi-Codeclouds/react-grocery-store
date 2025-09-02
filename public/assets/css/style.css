@@ -2952,3 +2952,77 @@ ul#myCategoriesTab li.active a {
 .wished-icon {
   color: #64b496 !important;
 }
+
+section.section-services p {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0;
+}
+
+.cr-banner-slider.swiper-container h5 {
+    letter-spacing: 0;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+}
+
+h4.cr-deal-title {
+    font-weight: 800;
+    letter-spacing: 0;
+}
+
+section.section-testimonial p {
+    min-height: 124px;
+}
+
+.error-area {
+    height: 100vh;
+    text-align: center;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    position: relative;
+    background-image: url(../images/404-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.d-table {
+    display: table !important;
+}
+.d-table {
+    width: 100%;
+    height: 100%;
+}
+
+.d-table-cell {
+    display: table-cell !important;
+}
+.d-table-cell {
+    vertical-align: middle;
+}
+.error-area .error-content h1 {
+    font-size: 100px;
+    color: #64b496;
+    margin-bottom: 25px;
+    font-weight: 800;
+    line-height: 100px;
+}
+.error-area .error-content h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #081828;
+    font-weight: 700;
+     font-family: "Poppins", sans-serif;
+}
+.error-area .error-content p {
+    font-weight: 400;
+    margin-bottom: 40px;
+     font-family: "Poppins", sans-serif;
+    color: #888;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}

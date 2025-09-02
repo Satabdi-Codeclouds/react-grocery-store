@@ -137,7 +137,7 @@ export default function CartSection() {
                         <div className="cr-cart-update-bottom pt-[30px] flex justify-between">
                           <Link
                             to={'/products'}
-                            className="cr-links text-[#444] inline-block underline-[1px] text-[15px] leading-[20px] font-medium tracking-[0.8px]"
+                            className="cr-button h-[40px] font-bold transition-all duration-[0.3s] ease-in-out py-[8px] px-[22px] text-[14px] font-Manrope capitalize leading-[1.2] bg-[#64b496] text-white border border-solid border-[#64b496] rounded-[5px] flex items-center justify-center hover:bg-black hover:border-black"
                           >
                             Continue Shopping
                           </Link>

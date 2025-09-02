@@ -33,18 +33,22 @@ const TrackSection = () => {
 
   return (
     <section className="cr-track py-[100px] max-[1200px]:py-[70px]">
-      <div className="flex flex-wrap justify-between relative items-center mx-auto min-[1600px]:max-w-[1500px] min-[1400px]:max-w-[1320px] min-[1200px]:max-w-[1140px] min-[992px]:max-w-[960px] min-[768px]:max-w-[720px] min-[576px]:max-w-[540px]">
-        {processingOrder ?
-          <div class="spinner-container">
-            <div class="spinner"></div>
-            <div class="spinner-text">Processing Order</div>
+      <div className="flex flex-wrap justify-center relative items-center mx-auto min-[1600px]:max-w-[1500px] min-[1400px]:max-w-[1320px] min-[1200px]:max-w-[1140px] min-[992px]:max-w-[960px] min-[768px]:max-w-[720px] min-[576px]:max-w-[540px] ">
+        {processingOrder ? (
+          <div className="spinner-container">
+            <div className="spinner"></div>
+            <div className="spinner-text">Processing Order</div>
           </div>
-          : 'Thank You. Successfully Order Placed!'}
+        ) : (
+          <div className="text-center text-[23px] tracking-[0] text-[#64b496] font-bold">
+            Thank You. Successfully Order Placed!
+          </div>
+        )}
 
         {/* Order Details Section */}
         {!processingOrder ?
           <div className="flex flex-wrap w-full">
-            <div className="w-full">
+            <div className="w-full mt-[55px]">
               <div className="cr-track-box">
                 {/* Track Cards */}
                 <div className="flex flex-wrap w-full mb-[-24px]">

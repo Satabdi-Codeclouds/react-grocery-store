@@ -21,8 +21,7 @@ const ContactSection = () => {
               </div>
               <div className="cr-banner-sub-title w-full">
                 <p className="max-w-[600px] m-auto font-Poppins text-[14px] text-[#212529] leading-[22px] text-center max-[1200px]:w-[80%] max-[992px]:w-full">
-                  Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs
-                  do ye admire. His secure called esteem praise.
+                  Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire. His secure called esteem praise.
                 </p>
               </div>
             </div>

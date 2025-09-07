@@ -3026,3 +3026,7 @@ section.section-testimonial p {
     display: flex;
     justify-content: center;
 }
+
+ul.navbar-nav li.nav-item a.nav-link:hover {
+    color: #64b496;
+}

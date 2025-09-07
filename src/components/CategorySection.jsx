@@ -56,7 +56,7 @@ const CategorySection = () => {
 
   const renderPane = (id, products) => (
     
-    <div className="tab-categories-pane" id={id} style={{ display: activeTab === id ? 'block' : 'none' }}>
+    <div key={'pane-item-'+id} className="tab-categories-pane" id={id} style={{ display: activeTab === id ? 'block' : 'none' }}>
       <div className="flex flex-wrap w-full mb-[-24px]">
 
         {products.map((product, idx) => (

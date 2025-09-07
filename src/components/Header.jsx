@@ -11,17 +11,6 @@ const menuItems = [
         link: "",
         child: []
     },
-    {
-        item: "Category",
-        link: "category",
-        child: [
-            {
-                item: "Shop Left sidebar",
-                link: "shop-left-sidebar",
-
-            }
-        ]
-    },
 
     {
         item: "Products",
@@ -34,29 +23,16 @@ const menuItems = [
         child: [
             {
                 item: "About Us",
-                link: "about",
+                link: "about-us",
             },
             {
                 item: "Contact Us",
-                link: "Contact",
+                link: "contact",
             },
             {
                 item: "Cart",
-                link: "cart",
-            },
-            {
-                item: "Checkout",
-                link: "checkout",
-            },
-            {
-                item: "Wishlist",
-                link: "wishlist",
-            },
-            
-            {
-                item: "Login",
-                link: "login",
-            },
+                link: "my-cart",
+            }
         ]
     },
 ]
@@ -187,7 +163,8 @@ function Header() {
                                         {
                                             items.map((element, index) => {
 
-                                                return <li
+                                                return <li 
+                                                key={'navitem-'+index}
                                                     className="nav-item dropdown relative mr-[25px] max-[1400px]:mr-[20px] max-[1200px]:mr-[30px]">
                                                     <Link to={element.link} className="nav-link dropdown-toggle font-Poppins text-[14px] font-medium block text-[#000] z-[1] flex items-center relative py-[11px] px-[8px] max-[1200px]:py-[8px] max-[1200px]:px-[0]">
                                                         {element.item}
@@ -203,9 +180,9 @@ function Header() {
                                                                 {element.child.map((childElement, childIndex) => {
 
 
-                                                                    return <li className="w-full mr-[0]">
+                                                                    return <li key={'child-nav-item-'+childIndex} className="w-full mr-[0]">
                                                                         <Link className="dropdown-item transition-all duration-[0.3s] ease-in-out font-Poppins py-[7px] px-[20px] bg-[#fff] relative capitalize text-[13px] text-[#777] hover:text-[#64b496] whitespace-nowrap tracking-[0.03rem] block w-full"
-                                                                            to={"about-us"}>{childElement.item}</Link>
+                                                                            to={childElement.link}>{childElement.item}</Link>
                                                                     </li>
                                                                 })}
                                                             </ul>

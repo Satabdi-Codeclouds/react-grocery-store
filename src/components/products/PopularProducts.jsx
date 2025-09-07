@@ -77,11 +77,7 @@ function PopularProducts() {
                     <div className="product-content flex flex-wrap w-full mb-[-24px]" id="MixItUpDA2FB7">
                         <div className="min-[1200px]:w-[25%] min-[992px]:w-[33.33%] w-full mb-[24px]">
                             <div className="flex flex-wrap w-full mb-[-24px] sticky top-[0]">
-                                <div className="min-[992px]:w-full w-[50%] max-[480px]:w-full px-[12px] mb-[24px]">
-
-
-
-                                </div>
+                               
                                 <div className="min-[992px]:w-full w-[50%] max-[480px]:w-full px-[12px] max-[480px]:hidden mb-[24px]">
                                     <div className="cr-ice-cubes max-h-[500px] overflow-hidden relative rounded-[5px] max-[992px]:h-[297px]">
                                         <img src="assets/images/product-banner.jpg" alt="product banner" className="w-full rounded-[5px] max-[420px]:h-auto" />
@@ -100,7 +96,7 @@ function PopularProducts() {
                                 {
                                     productList.length > 0 ? productList.map((element, index) => {
                                         return element.products.map((productItem,productItemIndex) => {
-                                            return <ProductItem productItem={productItem} categoryObj={element}/>
+                                            return <ProductItem key={'product-item-'+productItemIndex} productItem={productItem} categoryObj={element}/>
                                         })
                                         
                                     }) : ''

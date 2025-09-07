@@ -13,6 +13,7 @@ export default function CartSection() {
     });
     setTotalUnitPrice(totalPrice);
   }, [cartItems])
+  //console.log(cartItems)
   return (
     <>
       <section className="section-cart pt-[100px] max-[1200px]:pt-[70px]">
@@ -77,7 +78,7 @@ export default function CartSection() {
                                     className="text-[#444] font-medium text-[14px] flex leading-[1.5] tracking-[0.6px] items-center"
                                   >
                                     <img
-                                      src={"assets/images/1.jpg"}
+                                      src={item?.imageURLs?.length > 0 ? item?.imageURLs[0] : ''}
                                       alt={item.name}
                                       className="cr-cart-img mr-[20px] w-[60px] border-[1px] border-solid border-[#e9e9e9] rounded-[5px]"
                                     />
